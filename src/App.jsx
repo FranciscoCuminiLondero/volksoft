@@ -1,25 +1,21 @@
 import './App.css';
-import Button from './components/Button';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="flex flex-col justify-center items-center bg-gradient-to-br from-black via-black to-blue-900 h-screen gap-8 px-4">
-      <h1 className="text-3xl sm:text-4xl font-bold text-white text-center">
-        Welcome to our website!
-      </h1>
+    <>
+      <div className="flex flex-col min-h-screen">
+        {/* Header: Barra de navegación */}
+        <Header />
 
-      <img
-        src="/logotipo-volksoft-light.png"
-        alt="Logo Volksoft"
-        className="w-40 sm:w-56 object-contain"
-      />
+        {/* Main: Contenido de la página */}
+        <main className="flex-grow"></main>
 
-      <p className="text-sm sm:text-base text-gray-300 max-w-md text-center">
-        Right now we are working on the website. It will be available soon!
-      </p>
-
-      <Button route={'mailto:info@volksoft.com'}>Contact Us →</Button>
-    </div>
+        {/* Footer: Pie de página */}
+        <Footer />
+      </div>
+    </>
   );
 }
 

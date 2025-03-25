@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
+    "boxicons": "^2.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.30.0",
+    "reactstrap": "^9.2.3",
     "tailwindcss": "^4.0.15"
   },
   "devDependencies": {
