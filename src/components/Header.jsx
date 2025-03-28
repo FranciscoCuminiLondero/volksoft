@@ -2,16 +2,15 @@ import { Col, Row } from 'reactstrap';
 
 const Header = () => {
   return (
-    <header className="bg-black text-white py-6 px-10 flex items-center justify-between ">
+    <header className="backdrop-filter backdrop-blur-lg bg-black/30  flex items-center justify-between px-10">
       <div className="flex gap-4 items-center">
-        <img
-          src="./assets/logo-volksoft-light.png"
-          alt="Logo Volksoft"
-          className="w-25"
-        />
-        <h1 className="font-bold text-white text-3xl hidden md:block transition-all duration-300">
-          Volksoft
-        </h1>
+        <a href="#" className="m-0 p-0">
+          <img
+            src="./assets/logotipo-light.png"
+            alt="Logo Volksoft"
+            className="w-50"
+          />
+        </a>
       </div>
       <nav>
         <ul className="flex flex-col md:flex-row gap-4">

@@ -5,15 +5,14 @@ import { FaLinkedin, FaFacebookSquare, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-6 px-4">
+    <footer className="backdrop-filter backdrop-blur-lg bg-black/30 px-10 text-white p-5 z-100">
       <Container fluid>
         <Row className="flex flex-col md:flex-row justify-between md:items-start px-10">
           <Col className="mb-6 md:mb-0 text-center md:text-left flex flex-col items-center">
             <img
               src="/assets/logotipo-volksoft-light.png"
               alt="Logo Volksoft"
-              width="100"
-              className="mx-auto md:mx-0 mb-4 opacity-50"
+              className="mx-auto md:mx-0 mb-4 opacity-50 w-25"
             />
             <p className="text-sm">
               &copy; {new Date().getFullYear()} Volksoft. All rights reserved.
@@ -22,7 +21,7 @@ const Footer = () => {
 
           <Col className="mb-6 md:mb-0 text-center md:text-left">
             <h4 className="text-lg font-bold mb-4">Navigation</h4>
-            <ul className="list-none p-0 space-y-1">
+            <ul className="list-none p-0 space-y-1 ">
               <li>
                 <a href="#" className="text-white hover:text-gray-400">
                   Home
