@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.5",
     "@tailwindcss/vite": "^4.0.15",
     "boxicons": "^2.1.4",
     "react": "^19.0.0",
