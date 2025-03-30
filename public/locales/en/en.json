@@ -4,5 +4,51 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "contact": "Contact"
+  },
+  "home": {
+    "title": "Transforming ideas into software",
+    "description": "We are a team of passionate software developers dedicated to crafting innovative solutions for businesses of all sizes. With expertise in cutting-edge technologies and a commitment to excellence, we transform ideas into reality."
+  },
+  "services": {
+    "title": "What we do",
+    "subtitle": "We specialize in creating websites and digital solutions for businesses, entrepreneurs, and creatives.",
+    "cards": {
+      "web-development": {
+        "title": "Web Development",
+        "description": "We create beautiful websites that are optimized for search engines and user experience."
+      },
+      "landing-page": {
+        "title": "Landing Pages",
+        "description": "Standalone web page designed to convert visitors by encouraging them to take a specific action, such as signing up or making a purchase."
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "Our portfolio showcases our work in action, from web development to app development and data management."
+      },
+      "blogs": {
+        "title": "Blogs",
+        "description": "Our blog section provides valuable insights into the latest trends and techniques in web development."
+      },
+      "one-pages": {
+        "title": "One Pages",
+        "description": "We create unique, engaging websites that stand out from the crowd."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Our work in action.",
+    "description": "We create products that are unique and appealing.",
+    "cards": {
+      "web-ejemplo": {
+        "title": "Example Web Page",
+        "description": "A website that is unique and appealing."
+      }
+    }
+  },
+
+  "button": {
+    "get-started": "Get started",
+    "look-work": "Look this work!"
   }
 }
