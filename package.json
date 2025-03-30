@@ -10,14 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "@fontsource/poppins": "^5.2.5",
     "@tailwindcss/vite": "^4.0.15",
     "boxicons": "^2.1.4",
+    "i18next": "^24.2.3",
+    "i18next-browser-languagedetector": "^8.0.4",
+    "i18next-http-backend": "^3.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.4.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.30.0",
     "reactstrap": "^9.2.3",
+    "save": "^2.9.0",
     "tailwindcss": "^4.0.15"
   },
   "devDependencies": {
