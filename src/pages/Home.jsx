@@ -21,7 +21,7 @@ const Home = () => {
       <section className="container my-20 mx-auto bg-transparent z-10">
         <div className="container mx-auto px-4">
           {/* Card Container */}
-          <div className="max-w-3xl mx-auto bg-black/30 rounded-2xl shadow-xl p-8 text-center">
+          <div className="max-w-4xl mx-auto bg-black/30 rounded-2xl shadow-xl p-8 text-center">
             {/* Title */}
             <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-gray-500 via-gray-300 to-gray-100 text-6xl sm:text-5xl font-bold tracking-wide mb-6 p-2">
               {t('home.title')}
@@ -45,7 +45,7 @@ const Home = () => {
       </section>
       {/* Section 1: Services */}
       <section className="container my-20 mx-auto">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           {/* Title */}
           <h2 className="text-3xl font-bold text-white mb-4">
             {t('services.title')}
@@ -150,7 +150,7 @@ const Home = () => {
 
       {/* Section 2: Portfolio */}
       <section className="container my-23 mx-auto">
-        <div className="max-w-4xl mx-auto mb-5">
+        <div className="max-w-6xl mx-auto mb-5">
           <div className="flex items-center justify-between pb-2">
             <h1 className="text-4xl font-bold">{t('portfolio.title')}</h1>
             <p className="text-2xl font-extralight">
@@ -160,7 +160,7 @@ const Home = () => {
           <p className="">{t('portfolio.description')}</p>
         </div>
         {/* Card Container */}
-        <div className="grid grid-cols-5 grid-rows-4 gap-5 max-h-200 max-w-4xl mx-auto">
+        <div className="grid grid-cols-5 grid-rows-4 gap-5 max-h-200 max-w-6xl mx-auto">
           {/* Card 1 */}
           <div className="group relative bg-black/20 rounded-2xl shadow-xl col-span-3 row-span-2">
             <img
