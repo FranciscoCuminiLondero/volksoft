@@ -2,7 +2,52 @@
   "header": {
     "home": "Inicio",
     "services": "Servicios",
-    "portfolio": "Portfolio",
+    "portfolio": "Portafolio",
     "contact": "Contacto"
+  },
+  "home": {
+    "title": "Transformando ideas en software",
+    "description": "Somos un equipo de desarrolladores de software apasionados, dedicados a crear soluciones innovadoras para empresas de todos los tamaños. Con experiencia en tecnologías de vanguardia y un compromiso con la excelencia, transformamos ideas en realidad."
+  },
+  "services": {
+    "title": "Lo que hacemos",
+    "subtitle": "Nos especializamos en crear sitios web y soluciones digitales para empresas, emprendedores y creativos.",
+    "cards": {
+      "web-development": {
+        "title": "Desarrollo Web",
+        "description": "Creamos sitios web hermosos que están optimizados para motores de búsqueda y experiencia de usuario."
+      },
+      "landing-page": {
+        "title": "Páginas de Destino",
+        "description": "Página web independiente diseñada para convertir visitantes al incentivarlos a realizar una acción específica, como registrarse o hacer una compra."
+      },
+      "portfolio": {
+        "title": "Portafolio",
+        "description": "Nuestro portafolio muestra nuestro trabajo en acción, desde desarrollo web hasta desarrollo de aplicaciones y gestión de datos."
+      },
+      "blogs": {
+        "title": "Blogs",
+        "description": "Nuestra sección de blog ofrece información valiosa sobre las últimas tendencias y técnicas en desarrollo web."
+      },
+      "one-pages": {
+        "title": "Páginas Únicas",
+        "description": "Creamos sitios web únicos y atractivos que destacan de la multitud."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "subtitle": "Nuestro trabajo en acción.",
+    "description": "Creamos productos que son únicos y atractivos.",
+    "cards": {
+      "web-ejemplo": {
+        "title": "Ejemplo de Página Web",
+        "description": "Un sitio web que es único y atractivo."
+      }
+    }
+  },
+  "button": {
+    "get-started": "Comenzar",
+    "look-work": "¡Mira este trabajo!"
   }
 }
