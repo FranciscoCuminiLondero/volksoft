@@ -164,7 +164,7 @@ const Home = () => {
           {/* Card 1 */}
           <div className="group relative bg-black/20 rounded-2xl shadow-xl col-span-3 row-span-2">
             <img
-              src="../../public/assets/images/portfolio-1.webp"
+              src="../../public/assets/images/portfolio-1.png"
               alt=""
               className="rounded-xl w-full h-full object-cover opacity-75"
             />
@@ -186,7 +186,7 @@ const Home = () => {
           {/* Card 2 */}
           <div className="group relative bg-black/20 rounded-2xl shadow-xl col-span-2 row-span-2 col-start-4">
             <img
-              src="../../public/assets/images/portfolio-1.webp"
+              src="../../public/assets/images/portfolio-1.png"
               alt=""
               className="rounded-xl w-full h-full object-cover opacity-75"
             />
@@ -208,7 +208,7 @@ const Home = () => {
           {/* Card 3 */}
           <div className="group relative bg-black/20 rounded-2xl shadow-xl col-span-2 row-span-2 row-start-3">
             <img
-              src="../../public/assets/images/portfolio-1.webp"
+              src="../../public/assets/images/portfolio-1.png"
               alt=""
               className="rounded-xl w-full h-full object-cover opacity-75"
             />
@@ -230,7 +230,7 @@ const Home = () => {
           {/* Card 4 */}
           <div className="group relative bg-black/20 rounded-2xl shadow-xl col-span-3 row-span-2 col-start-3 row-start-3">
             <img
-              src="../../public/assets/images/portfolio-1.webp"
+              src="../../public/assets/images/portfolio-1.png"
               alt=""
               className="rounded-xl w-full h-full object-cover opacity-75"
             />
