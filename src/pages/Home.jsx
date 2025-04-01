@@ -44,7 +44,7 @@ const Home = () => {
         </div>
       </section>
       {/* Section 1: Services */}
-      <section className="container my-20 mx-auto">
+      <section className="container my-20 mx-auto py-30">
         <div className="max-w-6xl mx-auto text-center">
           {/* Title */}
           <h2 className="text-3xl font-bold text-white mb-4">
