@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { InlineWidget } from 'react-calendly';
 
 const Calendar = () => {
   const { t } = useTranslation();
@@ -10,12 +11,19 @@ const Calendar = () => {
         </h2>
         <p className="text-center w-1/3">{t('calendar.description')}</p>
       </div>
-      <div className="calendly-container">
-        <iframe
-          src="https://calendly.com/volksoft/first-meeting"
-          width="100%"
-          height="800"
-        ></iframe>
+      <div className="relative">
+        <InlineWidget
+          url="https://calendly.com/volksoft/first-meeting"
+          styles={{
+            height: '700px',
+            width: '100%',
+          }}
+          pageSettings={{
+            primaryColor: '#4F1680',
+            textColor: '#000000 ',
+            backgroundColor: '#ffffff',
+          }}
+        />
       </div>
     </section>
   );
