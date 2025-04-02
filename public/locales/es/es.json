@@ -7,6 +7,7 @@
   },
   "home": {
     "title": "Transformando ideas en software",
+    "subtitle": "Herramientas para ayudarte a crear el sitio web de tus sueños.",
     "description": "Somos un equipo de desarrolladores de software apasionados, dedicados a crear soluciones innovadoras para empresas de todos los tamaños. Con experiencia en tecnologías de vanguardia y un compromiso con la excelencia, transformamos ideas en realidad."
   },
   "services": {
@@ -19,7 +20,7 @@
       },
       "landing-page": {
         "title": "Páginas de Destino",
-        "description": "Página web independiente diseñada para convertir visitantes al incentivarlos a realizar una acción específica, como registrarse o hacer una compra."
+        "description": "Página web independiente diseñada para convertir visitantes alentándolos a realizar una acción específica, como registrarse o hacer una compra."
       },
       "portfolio": {
         "title": "Portafolio",
@@ -41,11 +42,30 @@
     "description": "Creamos productos que son únicos y atractivos.",
     "cards": {
       "web-ejemplo": {
-        "title": "Ejemplo de Página Web",
+        "title": "Ejemplo de página web",
         "description": "Un sitio web que es único y atractivo."
       }
     }
   },
+  "calendar": {
+    "title": "Calendario",
+    "description": "Nuestra sección de calendario ofrece información valiosa sobre las últimas tendencias y técnicas en desarrollo web."
+  },
+
+  "footer": {
+    "copyright": "Volksoft. Todos los derechos reservados.",
+    "social-media": {
+      "title": "Síguenos"
+    },
+    "navigation": {
+      "title": "Navegación",
+      "home": "Inicio",
+      "services": "Servicios",
+      "portfolio": "Portafolio",
+      "contact": "Contacto"
+    }
+  },
+
   "button": {
     "get-started": "Comenzar",
     "look-work": "¡Mira este trabajo!"
