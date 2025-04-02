@@ -1,12 +1,12 @@
-import { Col, Row } from 'reactstrap';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <header className="backdrop-filter backdrop-blur-lg bg-black/30  flex items-center justify-between px-10">
+    <header className="sticky top-0 bg-black text-white px-6 w-full flex justify-between z-50 shadow-lg mb-10">
       <div className="flex gap-4 items-center">
         <a href="#" className="m-0 p-0">
           <img
@@ -20,24 +20,24 @@ const Header = () => {
         <nav>
           <ul className="flex flex-col md:flex-row gap-4">
             <li>
-              <a href="#" className="text-white hover:text-gray-400">
+              <Link to="/" className="text-white hover:text-gray-400">
                 {t('header.home')}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-400">
+              <Link to="/services" className="text-white hover:text-gray-400">
                 {t('header.services')}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-400">
+              <Link to="/portfolio" className="text-white hover:text-gray-400">
                 {t('header.portfolio')}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-gray-400">
+              <Link to="/contact" className="text-white hover:text-gray-400">
                 {t('header.contact')}
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
