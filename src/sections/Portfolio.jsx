@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 const Portfolio = () => {
   const { t } = useTranslation();
   return (
-    <section className="container mx-auto max-w-6xl">
+    <section>
       <div className="mx-auto mb-5">
         <div className="flex items-center justify-between pb-2">
           <h1 className="text-4xl font-bold">{t('portfolio.title')}</h1>

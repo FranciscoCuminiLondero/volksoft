@@ -11,7 +11,7 @@ import {
 const Services = () => {
   const { t } = useTranslation();
   return (
-    <section className="container max-w-6xl mx-auto bg-gradient-to-r from-blue-600/20 to-purple-700/20 opacity-bg-70 rounded-2xl py-30 px-10">
+    <section className="bg-gradient-to-r from-blue-600/20 to-purple-700/20 opacity-bg-70 rounded-2xl py-30 px-10">
       <div className="text-center">
         {/* Title */}
         <h2 className="text-3xl font-bold text-white mb-4">

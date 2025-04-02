@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 const Calendar = () => {
   const { t } = useTranslation();
   return (
-    <section className="container mx-auto max-w-6xl">
+    <section>
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-3xl font-bold text-white pb-2">
           {t('calendar.title')}
