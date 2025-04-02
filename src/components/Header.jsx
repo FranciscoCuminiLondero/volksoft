@@ -21,7 +21,7 @@ const Header = () => {
     <header
       className={`sticky top-0 transition-colors duration-300 ${
         isScrolled ? 'bg-black/30' : 'bg-black'
-      } text-white px-6 w-full flex justify-between z-50 shadow-lg mb-10`}
+      } text-white px-6 w-full flex justify-between z-50 shadow-lg`}
     >
       <div className="flex gap-4 items-center">
         <a href="#" className="m-0 p-0">
