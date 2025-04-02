@@ -46,6 +46,10 @@
       }
     }
   },
+  "calendar": {
+    "title": "Calendar",
+    "description": "Our calendar section provides valuable insights into the latest trends and techniques in web development."
+  },
 
   "button": {
     "get-started": "Get started",
