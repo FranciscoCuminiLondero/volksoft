@@ -56,8 +56,8 @@ const Hero = () => {
           </a>
         </div>
         {/* Tech Icons Grid */}
-        <div className="flex flex-col justify-center items-center bg-black/30 rounded-2xl shadow-xl p-8 max-w-2xl mx-auto bg-black">
-          <h3 className="text-xl font-semibold text-gray-200 mb-6">
+        <div className="flex flex-col justify-center items-center bg-black/30 rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+          <h3 className="text-lg font-semibold text-gray-200 mb-6">
             {t('home.subtitle')}
           </h3>
           <div className="grid grid-cols-4 gap-6 w-100">
