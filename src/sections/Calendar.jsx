@@ -25,6 +25,14 @@ const Calendar = () => {
           }}
         />
       </div>
+      <div className="flex flex-col justify-center items-center mb-20">
+        <a
+          href="#"
+          className="inline-flex items-center px-6 py-3 bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition duration-300 cursor-pointer shadow-2xl"
+        >
+          {t('button.contact-us')}
+        </a>
+      </div>
     </section>
   );
 };

@@ -68,6 +68,7 @@
 
   "button": {
     "get-started": "Get started",
-    "look-work": "Look this work!"
+    "look-work": "Look this work!",
+    "contact-us": "Contact us!"
   }
 }
