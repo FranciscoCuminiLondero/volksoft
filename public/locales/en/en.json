@@ -52,6 +52,20 @@
     "description": "Our calendar section provides valuable insights into the latest trends and techniques in web development."
   },
 
+  "footer": {
+    "copyright": "Volksoft. All rights reserved.",
+    "social-media": {
+      "title": "Follow us"
+    },
+    "navigation": {
+      "title": "Navigation",
+      "home": "Home",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    }
+  },
+
   "button": {
     "get-started": "Get started",
     "look-work": "Look this work!"
