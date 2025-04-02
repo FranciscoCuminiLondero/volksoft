@@ -4,10 +4,3 @@ body {
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
 }
-
-.calendly-container {
-  background-color: none;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-}
