@@ -24,13 +24,13 @@ const Header = () => {
       } text-white px-6 w-full flex justify-between z-50 shadow-lg`}
     >
       <div className="flex gap-4 items-center">
-        <a href="#" className="m-0 p-0">
+        <Link href="/home" className="m-0 p-0">
           <img
             src="./assets/logotipo-light.png"
             alt="Logo Volksoft"
             className="w-50"
           />
-        </a>
+        </Link>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-4 ">
         <nav>
@@ -39,17 +39,22 @@ const Header = () => {
               <Link to="/" className="text-white hover:text-gray-400">
                 {t('header.home')}
               </Link>
-            </li>
+            </li>{' '}
             <li>
               <Link to="/services" className="text-white hover:text-gray-400">
                 {t('header.services')}
               </Link>
             </li>
             <li>
+              <Link to="/about" className="text-white hover:text-gray-400">
+                {t('header.about')}
+              </Link>
+            </li>
+            {/* <li>
               <Link to="/portfolio" className="text-white hover:text-gray-400">
                 {t('header.portfolio')}
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/contact" className="text-white hover:text-gray-400">
                 {t('header.contact')}
