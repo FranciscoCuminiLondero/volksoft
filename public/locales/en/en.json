@@ -2,6 +2,7 @@
   "header": {
     "home": "Home",
     "services": "Services",
+    "about": "About",
     "portfolio": "Portfolio",
     "contact": "Contact"
   },
@@ -34,6 +35,129 @@
         "title": "One Pages",
         "description": "We create unique, engaging websites that stand out from the crowd."
       }
+    },
+    "cta": {
+      "title": "Ready to start your project?",
+      "description": "Contact us today and discover how we can help you take your idea to the next level with our custom solutions.",
+      "button": "Know services"
+    },
+    "pricing": {
+      "title": "Our Plans",
+      "static": {
+        "title": "Static Website",
+        "description": "Professional and modern website, perfect for showcasing your business or service.",
+        "price": "USD $300"
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Complete online store with shopping cart and payment processing.",
+        "price": "USD $500",
+        "badge": "Popular"
+      },
+      "custom": {
+        "title": "Custom",
+        "description": "Tailored web solutions for your specific business needs.",
+        "price": "Consult"
+      }
+    },
+    "technologies": {
+      "title": "Technologies We Use"
+    },
+    "process": {
+      "title": "Our Work Process",
+      "step1": {
+        "title": "Initial Call",
+        "description": "A brief call where you tell us your vision and needs. No commitments, we just want to get to know you and understand your project."
+      },
+      "step2": {
+        "title": "Custom Development",
+        "description": "We handle the entire technical process, from design to implementation, adapting to your specific needs."
+      },
+      "step3": {
+        "title": "Delivery & Support",
+        "description": "We implement your solution and provide the necessary support to ensure its continued success."
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Learn more about our passion for creating innovative digital solutions that transform ideas into reality.",
+    "section": {
+      "title": "Who We Are?",
+      "subtitle": "A team passionate about technology and innovation",
+      "description": "We are Volksoft, an emerging software development company with a fresh and innovative approach. We specialize in web development, mobile applications, and technology consulting, combining cutting-edge technologies with creative ideas.",
+      "point1": "Projects in development with modern technologies",
+      "point2": "Cutting-edge technologies and best practices",
+      "point3": "Young, dynamic team eager to grow",
+      "button": "Learn More"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Create innovative and high-quality digital solutions that generate real value for our clients, establishing lasting relationships based on trust and mutual growth."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "Become a leading software development company, recognized for our creativity, innovation, and ability to adapt to new market technologies."
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "Innovation, transparency, commitment to quality, and passion for learning are the principles that drive us to give our best in every project."
+    },
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Volksoft was born from a passion for technology and the desire to create solutions that make a difference. We are a young company, founded with the vision of revolutionizing software development.",
+      "paragraph2": "Although we are new to the market, our team consists of passionate professionals prepared to face any technological challenge. We are ready to grow alongside our clients."
+    },
+    "stats": {
+      "technologies": "10+",
+      "technologiesLabel": "Technologies Mastered",
+      "experience": "24/7",
+      "experienceLabel": "Support Available",
+      "delivery": "100%",
+      "deliveryLabel": "Quality Commitment",
+      "innovation": "∞",
+      "innovationLabel": "Creative Ideas"
+    },
+    "whyChoose": {
+      "title": "Why Choose Us?",
+      "experience": {
+        "title": "Fresh Perspective",
+        "description": "We are a new company with fresh ideas and a modern approach to solving complex technological problems."
+      },
+      "innovation": {
+        "title": "Constant Innovation",
+        "description": "We use the latest technologies and methodologies in the market to ensure modern and scalable solutions."
+      },
+      "dedication": {
+        "title": "Total Commitment",
+        "description": "As an emerging company, each project is a growth opportunity and receives our maximum dedication and personalized attention."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help you make your project a reality",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "location": "City, Country",
+      "phone": "+1234567890",
+      "email": "contact@volksoft.com",
+      "whatsapp": "+1234567890"
+    },
+    "schedule": {
+      "title": "Business Hours",
+      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+      "saturday": "Saturday: 10:00 AM - 2:00 PM",
+      "sunday": "Sunday: Closed"
+    },
+    "meeting": {
+      "title": "Schedule a Meeting"
     }
   },
   "portfolio": {
@@ -65,10 +189,10 @@
       "contact": "Contact"
     }
   },
-
   "button": {
     "get-started": "Get started",
     "look-work": "Look this work!",
-    "contact-us": "Contact us!"
+    "contact-us": "Contact us!",
+    "contact": "Contact"
   }
 }

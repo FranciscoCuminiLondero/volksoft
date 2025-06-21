@@ -2,6 +2,7 @@
   "header": {
     "home": "Inicio",
     "services": "Servicios",
+    "about": "Nosotros",
     "portfolio": "Portafolio",
     "contact": "Contacto"
   },
@@ -34,6 +35,129 @@
         "title": "Páginas Únicas",
         "description": "Creamos sitios web únicos y atractivos que destacan de la multitud."
       }
+    },
+    "cta": {
+      "title": "¿Listo para comenzar tu proyecto?",
+      "description": "Contáctanos hoy y descubre cómo podemos ayudarte a llevar tu idea al siguiente nivel con nuestras soluciones personalizadas.",
+      "button": "Conocer servicios"
+    },
+    "pricing": {
+      "title": "Nuestros Planes",
+      "static": {
+        "title": "Web Estática",
+        "description": "Página web profesional y moderna, perfecta para presentar tu negocio o servicio.",
+        "price": "USD $300"
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Tienda en línea completa con carrito de compras y procesamiento de pagos.",
+        "price": "USD $500",
+        "badge": "Popular"
+      },
+      "custom": {
+        "title": "Personalizada",
+        "description": "Soluciones web a medida para necesidades específicas de tu negocio.",
+        "price": "Consultar"
+      }
+    },
+    "technologies": {
+      "title": "Tecnologías que Utilizamos"
+    },
+    "process": {
+      "title": "Nuestro Proceso de Trabajo",
+      "step1": {
+        "title": "Llamada Inicial",
+        "description": "Una breve llamada donde nos cuentas tu visión y necesidades. Sin compromisos, solo queremos conocerte y entender tu proyecto."
+      },
+      "step2": {
+        "title": "Desarrollo Personalizado",
+        "description": "Nos encargamos de todo el proceso técnico, desde el diseño hasta la implementación, adaptándonos a tus necesidades específicas."
+      },
+      "step3": {
+        "title": "Entrega y Soporte",
+        "description": "Implementamos tu solución y te brindamos el soporte necesario para asegurar su éxito continuo."
+      }
+    }
+  },
+  "about": {
+    "title": "Acerca de Nosotros",
+    "subtitle": "Conoce más sobre nuestra pasión por crear soluciones digitales innovadoras que transforman ideas en realidad.",
+    "section": {
+      "title": "¿Quiénes Somos?",
+      "subtitle": "Un equipo apasionado por la tecnología y la innovación",
+      "description": "Somos Volksoft, una empresa emergente dedicada al desarrollo de software con un enfoque fresco e innovador. Nos especializamos en desarrollo web, aplicaciones móviles y consultoría tecnológica, combinando las últimas tecnologías con ideas creativas.",
+      "point1": "Proyectos en desarrollo con tecnologías modernas",
+      "point2": "Tecnologías de vanguardia y mejores prácticas",
+      "point3": "Equipo joven, dinámico y con ganas de crecer",
+      "button": "Conocer Más"
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Crear soluciones digitales innovadoras y de alta calidad que generen valor real para nuestros clientes, estableciendo relaciones duraderas basadas en la confianza y el crecimiento mutuo."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Convertirnos en una empresa líder en desarrollo de software, reconocida por nuestra creatividad, innovación y capacidad de adaptarnos a las nuevas tecnologías del mercado."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "description": "Innovación, transparencia, compromiso con la calidad y pasión por aprender son los principios que nos impulsan a dar lo mejor en cada proyecto."
+    },
+    "story": {
+      "title": "Nuestra Historia",
+      "paragraph1": "Volksoft nació de la pasión por la tecnología y el deseo de crear soluciones que marquen la diferencia. Somos una empresa completamente nueva, fundada con la visión de ofrecer desarrollo de software de calidad.",
+      "paragraph2": "Estamos en el inicio de nuestro camino, listos para tomar nuestros primeros proyectos y construir relaciones duraderas con clientes que confíen en nuestro potencial y dedicación."
+    },
+    "stats": {
+      "technologies": "10+",
+      "technologiesLabel": "Tecnologías Dominadas",
+      "experience": "24/7",
+      "experienceLabel": "Soporte Disponible",
+      "delivery": "100%",
+      "deliveryLabel": "Compromiso de Calidad",
+      "innovation": "∞",
+      "innovationLabel": "Ideas Creativas"
+    },
+    "whyChoose": {
+      "title": "¿Por Qué Elegirnos?",
+      "experience": {
+        "title": "Perspectiva Fresca",
+        "description": "Somos una empresa nueva con ideas frescas y un enfoque moderno para resolver problemas tecnológicos complejos."
+      },
+      "innovation": {
+        "title": "Innovación Constante",
+        "description": "Utilizamos las últimas tecnologías y metodologías del mercado para garantizar soluciones modernas y escalables."
+      },
+      "dedication": {
+        "title": "Compromiso Total",
+        "description": "Como empresa emergente, cada proyecto es una oportunidad de crecimiento y recibe nuestra máxima dedicación y atención personalizada."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte a hacer realidad tu proyecto",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje"
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "location": "Ciudad, País",
+      "phone": "+1234567890",
+      "email": "contacto@volksoft.com",
+      "whatsapp": "+1234567890"
+    },
+    "schedule": {
+      "title": "Horario de Atención",
+      "weekdays": "Lunes - Viernes: 9:00 AM - 6:00 PM",
+      "saturday": "Sábado: 10:00 AM - 2:00 PM",
+      "sunday": "Domingo: Cerrado"
+    },
+    "meeting": {
+      "title": "Agenda una Reunión"
     }
   },
   "portfolio": {
@@ -65,10 +189,10 @@
       "contact": "Contacto"
     }
   },
-
   "button": {
     "get-started": "Comenzar",
     "look-work": "¡Mira este trabajo!",
-    "contact-us": "Contáctanos!"
+    "contact-us": "Contáctanos!",
+    "contact": "Contactar"
   }
 }

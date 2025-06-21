@@ -3,6 +3,7 @@ import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
+import About from './pages/About';
 import Contact from './pages/Contact';
 
 export const router = createBrowserRouter([
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: 'services',
         element: <Services />,
+      },
+      {
+        path: 'about',
+        element: <About />,
       },
       {
         path: 'portfolio',
