@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { FaAngleDown } from 'react-icons/fa';
 import TechCarousel from '../components/TechCarousel';
-import Logo from '/assets/logotipo-volksoft-light.png';
+import Logo from '../../public/assets/logotipo-volksoft-light.png';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -18,15 +19,14 @@ const Hero = () => {
               </h1>
               <p className="text-gray-300 text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 leading-relaxed text-center lg:text-left max-w-none">
                 {t('home.description')}
-              </p>
-              <div className="flex justify-center lg:justify-start">
-                <a
-                  href="#contact"
+              </p>              <div className="flex justify-center lg:justify-start">
+                <Link
+                  to="/services"
                   className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 cursor-pointer shadow-2xl hover:shadow-purple-500/25 hover:scale-105 transform text-base sm:text-lg"
                 >
                   <span>{t('button.get-started')}</span>
                   <FaAngleDown className="ml-2 sm:ml-3 text-lg sm:text-xl" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

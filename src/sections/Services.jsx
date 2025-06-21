@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import {
   FaGlobe,
@@ -6,6 +7,7 @@ import {
   FaRegUser,
   FaBlog,
   FaElementor,
+  FaArrowRight,
 } from 'react-icons/fa';
 
 const Services = () => {
@@ -108,8 +110,26 @@ const Services = () => {
                 <p className="absolute inset-0 text-white text-sm bg-opacity-60 rounded-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   {t('services.cards.one-pages.description')}
                 </p>
-              </a>
+              </a>{' '}
             </div>
+          </div>
+        </div>
+        {/* Call to Action */}
+        <div className="mt-24 w-full sm:w-3/4 lg:w-1/2 mx-auto">
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              {t('services.cta.title')}
+            </h3>
+            <p className="text-gray-300 text-lg mb-6 max-w-xl mx-auto">
+              {t('services.cta.description')}
+            </p>
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 hover:scale-105 transform"
+            >
+              <span className="mr-2">{t('services.cta.button')}</span>
+              <FaArrowRight className="text-lg" />
+            </Link>
           </div>
         </div>
       </div>
