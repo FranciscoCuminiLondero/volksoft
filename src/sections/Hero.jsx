@@ -1,84 +1,52 @@
 import { useTranslation } from 'react-i18next';
-import {
-  FaAngleDown,
-  FaLinkedin,
-  FaEnvelope,
-  FaWhatsapp,
-  FaReact,
-  FaNodeJs,
-  FaPython,
-  FaJava,
-  FaDatabase,
-  FaAngular,
-  FaVuejs,
-  FaPhp,
-  FaDocker,
-  FaAws,
-  FaGithub,
-} from 'react-icons/fa';
-import { SiTypescript, SiMongodb, SiPostgresql, SiRedis } from 'react-icons/si';
-import { useState } from 'react';
+import { FaAngleDown } from 'react-icons/fa';
+import TechCarousel from '../components/TechCarousel';
+import Logo from '/assets/logotipo-volksoft-light.png';
 
 const Hero = () => {
   const { t } = useTranslation();
-  const [icons] = useState([
-    { Icon: FaReact, color: '#61DAFB' },
-    { Icon: FaAngular, color: '#DD0031' },
-    { Icon: FaVuejs, color: '#41B883' },
-    { Icon: FaNodeJs, color: '#339933' },
-    { Icon: FaPython, color: '#3776AB' },
-    { Icon: FaJava, color: '#007396' },
-    { Icon: FaPhp, color: '#777BB4' },
-    { Icon: SiTypescript, color: '#3178C6' },
-    { Icon: FaDatabase, color: '#336791' },
-    { Icon: SiMongodb, color: '#47A248' },
-    { Icon: SiPostgresql, color: '#4169E1' },
-    { Icon: SiRedis, color: '#DC382D' },
-    { Icon: FaDocker, color: '#2496ED' },
-    { Icon: FaAws, color: '#FF9900' },
-  ]);
-
   return (
-    <section className="bg-transparent min-h-screen flex items-center justify-center ">
-      {/* Card Container */}
-      <div className="flex items-start justify-between gap-5">
-        <div className="mx-auto bg-black/30 rounded-2xl shadow-xl p-8 text-center max-w-2xl">
-          <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-gray-500 via-gray-300 to-gray-100 text-6xl sm:text-5xl font-bold tracking-wide mb-6 p-2">
-            {t('home.title')}
-          </h2>
-          <p className="text-gray-300 text-lg mb-6">{t('home.description')}</p>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition duration-300 cursor-pointer shadow-2xl"
-          >
-            {t('button.get-started')}
-            <FaAngleDown className="ml-2 font-black space-x-1 text-l" />
-          </a>
-        </div>
-        {/* Tech Icons Grid */}
-        <div className="flex flex-col justify-center items-center bg-black/30 rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
-          <h3 className="text-lg font-semibold text-gray-200 mb-6">
-            {t('home.subtitle')}
-          </h3>
-          <div className="grid grid-cols-4 gap-6 w-100">
-            {icons.map(({ Icon, color }, index) => (
-              <div
-                key={index}
-                className="aspect-square bg-black/20 rounded-xl hover:bg-black/20 hover:scale-105 transition-all ease-in-out duration-500 group cursor-pointer relative overflow-hidden flex items-center justify-center"
-                style={{ '--icon-color': color }}
-              >
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500 ease-in-out"
-                  style={{
-                    backgroundColor: color,
-                    filter: 'blur(10px)',
-                    transform: 'scale(1.2)',
-                  }}
-                />
-                <Icon className="text-5xl text-gray-300 group-hover:[color:var(--icon-color)] transition-colors duration-500 ease-in-out relative z-10" />
+    <section className="bg-transparent min-h-screen flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto w-full">
+        {/* Logo y contenido principal */}
+        <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 mb-8 lg:mb-16">
+          {/* Contenido de texto */}
+          <div className="w-full lg:flex-1 max-w-full lg:max-w-2xl order-2 lg:order-1">
+            <div className="text-center lg:text-left px-4 lg:px-0">
+              <h1 className="text-transparent bg-clip-text bg-gradient-to-br from-gray-400 via-gray-200 to-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight">
+                {t('home.title')}
+              </h1>
+              <p className="text-gray-300 text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 leading-relaxed text-center lg:text-left max-w-none">
+                {t('home.description')}
+              </p>
+              <div className="flex justify-center lg:justify-start">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 cursor-pointer shadow-2xl hover:shadow-purple-500/25 hover:scale-105 transform text-base sm:text-lg"
+                >
+                  <span>{t('button.get-started')}</span>
+                  <FaAngleDown className="ml-2 sm:ml-3 text-lg sm:text-xl" />
+                </a>
               </div>
-            ))}
+            </div>
           </div>
+          {/* Logo Container */}
+          <div className="flex-shrink-0 order-1 lg:order-2">
+            <div className="relative group cursor-pointer">
+              <img
+                src={Logo}
+                alt="Volksoft Logo"
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-contain drop-shadow-2xl transition-all duration-300 hover:scale-110 transform"
+              />
+              {/* Efecto de resplandor hover */}
+              <div className="absolute inset-0 w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 xl:w-56 xl:h-56 bg-gradient-to-br from-purple-500/40 to-blue-500/40 rounded-full blur-xl -z-10 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tech Icons Band */}
+        <div className="w-full overflow-hidden">
+          <TechCarousel />
         </div>
       </div>
     </section>
