@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@emailjs/browser": "^4.4.1",
     "@fontsource/poppins": "^5.2.5",
     "@tailwindcss/vite": "^4.0.15",
     "boxicons": "^2.1.4",
