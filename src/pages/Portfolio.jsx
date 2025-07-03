@@ -50,12 +50,12 @@ const Portfolio = () => {
                 </span>
               </div>
             </div>
-            <a
-              href="#"
-              className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 w-full justify-center"
+            <button
+              disabled
+              className="bg-gray-600/50 text-gray-400 px-6 py-3 rounded-full font-semibold cursor-not-allowed flex items-center gap-2 w-full justify-center"
             >
-              <FaExternalLinkAlt className="text-sm" /> Visitar Sitio
-            </a>
+              <FaExternalLinkAlt className="text-sm" /> Próximamente
+            </button>
           </div>
         </div>
 
@@ -92,12 +92,12 @@ const Portfolio = () => {
                 </span>
               </div>
             </div>
-            <a
-              href="#"
-              className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 w-full justify-center"
+            <button
+              disabled
+              className="bg-gray-600/50 text-gray-400 px-6 py-3 rounded-full font-semibold cursor-not-allowed flex items-center gap-2 w-full justify-center"
             >
-              <FaExternalLinkAlt className="text-sm" /> Visitar Sitio
-            </a>
+              <FaExternalLinkAlt className="text-sm" /> Próximamente
+            </button>
           </div>
         </div>
       </section>

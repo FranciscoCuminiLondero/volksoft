@@ -1,1 +1,48 @@
 @import 'tailwindcss';
+
+/* Animaciones para transiciones de página */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Transiciones suaves para el scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Clase para las transiciones de página */
+.page-transition {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Transición alternativa más sutil */
+.page-fade {
+  animation: fadeIn 1.6s ease-out forwards;
+}

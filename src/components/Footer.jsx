@@ -1,6 +1,7 @@
 import { Row, Col, Container } from 'reactstrap';
 import { FaLinkedin, FaFacebookSquare, FaEnvelope } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -25,24 +26,32 @@ const Footer = () => {
             </h4>
             <ul className=" flex list-none p-0 space-x-4 ">
               <li>
-                <a href="#" className="text-white hover:text-gray-400">
+                <Link to="/" className="text-white hover:text-gray-400">
                   {t('footer.navigation.home')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-gray-400">
+                <Link to="/services" className="text-white hover:text-gray-400">
                   {t('footer.navigation.services')}
-                </a>
+                </Link>
               </li>
-              <li>
-                <a href="#" className="text-white hover:text-gray-400">
+              {/* <li>
+                <Link
+                  to="/portfolio"
+                  className="text-white hover:text-gray-400"
+                >
                   {t('footer.navigation.portfolio')}
-                </a>
+                </Link>
+              </li> */}
+              <li>
+                <Link to="/about" className="text-white hover:text-gray-400">
+                  {t('footer.navigation.about')}
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-gray-400">
+                <Link to="/contact" className="text-white hover:text-gray-400">
                   {t('footer.navigation.contact')}
-                </a>
+                </Link>
               </li>
             </ul>
           </Col>
@@ -51,34 +60,38 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">
               {t('footer.social-media.title')}
             </h4>
-            <ul className="flex justify-center md:justify-start space-x-4">
+            <ul className="flex justify-center  space-x-4">
               <li>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/volksoft"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white hover:text-gray-400"
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin size={24} />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white hover:text-gray-400"
                   aria-label="Facebook"
                 >
                   <FaFacebookSquare size={24} />
                 </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+              </li> */}
+              {/* <li>
+                <Link
+                  to="/contact"
                   className="text-white hover:text-gray-400"
-                  aria-label="Email"
+                  aria-label="Contact"
                 >
                   <FaEnvelope size={24} />
-                </a>
-              </li>
+                </Link>
+              </li> */}
             </ul>
           </Col>
         </Row>

@@ -24,7 +24,7 @@ const Header = () => {
       } text-white px-6 w-full flex justify-between z-50 shadow-lg`}
     >
       <div className="flex gap-4 items-center">
-        <Link href="/home" className="m-0 p-0">
+        <Link to="/" className="m-0 p-0">
           <img
             src="./assets/logotipo-light.png"
             alt="Logo Volksoft"
