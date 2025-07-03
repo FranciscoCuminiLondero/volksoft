@@ -11,6 +11,7 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // Estado del formulario
   const [formData, setFormData] = useState({
@@ -34,6 +35,24 @@ const Contact = () => {
       return () => clearTimeout(timer);
     }
   }, [statusMessage]);
+
+  // Manejar redimensionamiento de ventana para calendario responsivo
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Función para determinar la altura del calendario
+  const getCalendarHeight = () => {
+    if (windowWidth < 768) return '500px';        // Móvil
+    if (windowWidth < 1024) return '700px';       // Tablet
+    if (windowWidth < 1440) return '800px';       // Desktop
+    return '900px';                              // Pantallas grandes
+  };
 
   // Manejar cambios en los inputs
   const handleInputChange = (e) => {
@@ -97,7 +116,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col gap-14 p-8">
+    <div className="flex flex-col gap-8 md:gap-14 p-4 md:p-8">
       {' '}
       {/* Hero Section */}
       <section className="text-center mb-12">
@@ -108,9 +127,9 @@ const Contact = () => {
           {t('contact.subtitle')}
         </p>
       </section>
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
         {/* Contact Form */}
-        <section className="bg-black/30 rounded-2xl p-8">
+        <section className="bg-black/30 rounded-2xl p-6 md:p-8">
           <form className="space-y-6" onSubmit={handleSubmit}>
             {/* Mensaje de estado */}
             {statusMessage && (
@@ -181,7 +200,7 @@ const Contact = () => {
         {/* Contact Information */}
         <section className="space-y-8">
           {' '}
-          <div className="bg-black/30 rounded-2xl p-8">
+          <div className="bg-black/30 rounded-2xl p-6 md:p-8">
             <h3 className="text-2xl font-bold text-white mb-6">
               {t('contact.info.title')}
             </h3>
@@ -210,7 +229,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="bg-black/30 rounded-2xl p-8">
+          <div className="bg-black/30 rounded-2xl p-6 md:p-8">
             <h3 className="text-2xl font-bold text-white mb-6">
               {t('contact.schedule.title')}
             </h3>
@@ -223,23 +242,26 @@ const Contact = () => {
         </section>
       </div>{' '}
       {/* Calendly Integration */}
-      <section className="bg-black/30 rounded-2xl p-8">
-        <h2 className="text-2xl font-bold text-white text-center mb-6">
+      <section className="bg-black/30 rounded-2xl p-4 md:p-8">
+        <h2 className="text-xl md:text-2xl font-bold text-white text-center mb-4 md:mb-6">
           {t('contact.meeting.title')}
         </h2>
-        <div className="relative">
-          <InlineWidget
-            url="https://calendly.com/volksoft/first-meeting"
-            styles={{
-              height: '700px',
-              width: '100%',
-            }}
-            pageSettings={{
-              primaryColor: '#4F1680',
-              textColor: '#000000',
-              backgroundColor: '#ffffff',
-            }}
-          />
+        <div className="relative -mx-4 md:mx-0">
+          <div className="w-full max-w-6xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+            <InlineWidget
+              url="https://calendly.com/volksoft/first-meeting"
+              styles={{
+                height: getCalendarHeight(),
+                width: '100%',
+                minHeight: '400px',
+              }}
+              pageSettings={{
+                primaryColor: '#4F1680',
+                textColor: '#000000',
+                backgroundColor: '#ffffff',
+              }}
+            />
+          </div>
         </div>
       </section>
     </div>
