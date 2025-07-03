@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,58 +15,172 @@ const Header = () => {
       setIsScrolled(scrollPosition > 0);
     };
 
+    const handleClickOutside = (event) => {
+      if (isMobileMenuOpen && !event.target.closest('header')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header
       className={`sticky top-0 transition-colors duration-300 ${
         isScrolled ? 'bg-black/30' : 'bg-black'
-      } text-white px-6 w-full flex justify-between z-50 shadow-lg`}
+      } text-white px-6 w-full z-50 shadow-lg`}
     >
-      <div className="flex gap-4 items-center">
-        <Link to="/" className="m-0 p-0">
-          <img
-            src="./assets/logotipo-light.png"
-            alt="Logo Volksoft"
-            className="w-50"
-          />
-        </Link>
+      <div className="flex justify-between items-center py-4">
+        {/* Logo */}
+        <div className="flex items-center">
+          <Link to="/" className="m-0 p-0">
+            <img
+              src="./assets/logotipo-light.png"
+              alt="Logo Volksoft"
+              className="w-50"
+            />
+          </Link>
+        </div>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-4">
+          <nav>
+            <ul className="flex gap-6">
+              <li>
+                <Link
+                  to="/"
+                  className="text-white hover:text-gray-400 transition-colors"
+                >
+                  {t('header.home')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-white hover:text-gray-400 transition-colors"
+                >
+                  {t('header.services')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-white hover:text-gray-400 transition-colors"
+                >
+                  {t('header.about')}
+                </Link>
+              </li>
+              {/* <li>
+                <Link to="/portfolio" className="text-white hover:text-gray-400 transition-colors">
+                  {t('header.portfolio')}
+                </Link>
+              </li> */}
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-white hover:text-gray-400 transition-colors"
+                >
+                  {t('header.contact')}
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <LanguageSwitcher />
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMobileMenu}
+          className="md:hidden text-white hover:text-gray-400 transition-colors p-2"
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? (
+            <FaTimes className="w-6 h-6" />
+          ) : (
+            <FaBars className="w-6 h-6" />
+          )}
+        </button>
       </div>
-      <div className="flex flex-col md:flex-row items-center gap-4 ">
-        <nav>
-          <ul className="flex flex-col md:flex-row gap-4">
-            <li>
-              <Link to="/" className="text-white hover:text-gray-400">
-                {t('header.home')}
-              </Link>
-            </li>{' '}
-            <li>
-              <Link to="/services" className="text-white hover:text-gray-400">
-                {t('header.services')}
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="text-white hover:text-gray-400">
-                {t('header.about')}
-              </Link>
-            </li>
-            {/* <li>
-              <Link to="/portfolio" className="text-white hover:text-gray-400">
-                {t('header.portfolio')}
-              </Link>
-            </li> */}
-            <li>
-              <Link to="/contact" className="text-white hover:text-gray-400">
-                {t('header.contact')}
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        {/* Change language buttons */}
-        <LanguageSwitcher />
-      </div>
+
+      {/* Mobile Navigation */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg shadow-lg mobile-menu-enter border-t border-gray-700">
+          <nav className="px-6 py-4">
+            <ul className="flex flex-col gap-4">
+              <li>
+                <Link
+                  to="/"
+                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
+                  onClick={closeMobileMenu}
+                >
+                  {t('header.home')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
+                  onClick={closeMobileMenu}
+                >
+                  {t('header.services')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
+                  onClick={closeMobileMenu}
+                >
+                  {t('header.about')}
+                </Link>
+              </li>
+              {/* <li>
+                <Link 
+                  to="/portfolio" 
+                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
+                  onClick={closeMobileMenu}
+                >
+                  {t('header.portfolio')}
+                </Link>
+              </li> */}
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
+                  onClick={closeMobileMenu}
+                >
+                  {t('header.contact')}
+                </Link>
+              </li>
+              <li className="pt-4 border-t border-gray-600">
+                <LanguageSwitcher />
+              </li>
+            </ul>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
