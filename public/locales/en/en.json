@@ -141,14 +141,17 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll contact you soon.",
+      "error": "Error sending message. Please try again."
     },
     "info": {
       "title": "Contact Information",
       "location": "City, Country",
-      "phone": "+1234567890",
-      "email": "contact@volksoft.com",
-      "whatsapp": "+1234567890"
+      "phone": "+1 (332) 231-2192",
+      "email": "info@volksoft.io",
+      "whatsapp": "+1 (332) 231-2192"
     },
     "schedule": {
       "title": "Business Hours",

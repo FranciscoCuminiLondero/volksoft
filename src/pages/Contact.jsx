@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   FaMapMarkerAlt,
   FaPhone,
@@ -22,6 +22,18 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
   const [statusType, setStatusType] = useState(''); // 'success' or 'error'
+
+  // Auto-ocultar mensajes después de 3 segundos
+  useEffect(() => {
+    if (statusMessage) {
+      const timer = setTimeout(() => {
+        setStatusMessage('');
+        setStatusType('');
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [statusMessage]);
 
   // Manejar cambios en los inputs
   const handleInputChange = (e) => {
@@ -67,9 +79,7 @@ const Contact = () => {
       );
 
       setStatusType('success');
-      setStatusMessage(
-        t('contact.form.success') || 'Mensaje enviado correctamente.'
-      );
+      setStatusMessage(t('contact.form.success'));
 
       // Limpiar formulario
       setFormData({
@@ -80,10 +90,7 @@ const Contact = () => {
     } catch (error) {
       console.error('Error al enviar email:', error);
       setStatusType('error');
-      setStatusMessage(
-        t('contact.form.error') ||
-          'Error al enviar el mensaje. Inténtalo de nuevo.'
-      );
+      setStatusMessage(t('contact.form.error'));
     } finally {
       setIsLoading(false);
     }
@@ -166,9 +173,7 @@ const Contact = () => {
                   : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white'
               }`}
             >
-              {isLoading
-                ? t('contact.form.sending') || 'Enviando...'
-                : t('contact.form.submit')}
+              {isLoading ? t('contact.form.sending') : t('contact.form.submit')}
             </button>
           </form>
         </section>
@@ -181,18 +186,28 @@ const Contact = () => {
               {t('contact.info.title')}
             </h3>
             <div className="space-y-4">
-              {/* <div className="flex items-center gap-4 text-gray-300">
+              <div className="flex items-center gap-4 text-gray-300">
                 <FaPhone className="text-purple-500 text-xl" />
-                <span>{t('contact.info.phone')}</span>
-              </div> */}
+                <span>
+                  <a href="tel:+13322312192">{t('contact.info.phone')}</a>
+                </span>
+              </div>
               <div className="flex items-center gap-4 text-gray-300">
                 <FaEnvelope className="text-purple-500 text-xl" />
-                info@volksoft.io
+                <span>{t('contact.info.email')}</span>
               </div>
-              {/* <div className="flex items-center gap-4 text-gray-300">
+              <div className="flex items-center gap-4 text-gray-300">
                 <FaWhatsapp className="text-purple-500 text-xl" />
-                <span>{t('contact.info.whatsapp')}</span>
-              </div> */}
+                <span>
+                  <a
+                    href="https://wa.me/13322312192 "
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('contact.info.whatsapp')}
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
           <div className="bg-black/30 rounded-2xl p-8">
