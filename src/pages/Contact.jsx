@@ -48,10 +48,10 @@ const Contact = () => {
 
   // Función para determinar la altura del calendario
   const getCalendarHeight = () => {
-    if (windowWidth < 768) return '500px';        // Móvil
-    if (windowWidth < 1024) return '700px';       // Tablet
-    if (windowWidth < 1440) return '800px';       // Desktop
-    return '900px';                              // Pantallas grandes
+    if (windowWidth < 768) return '500px'; // Móvil
+    if (windowWidth < 1024) return '700px'; // Tablet
+    if (windowWidth < 1440) return '800px'; // Desktop
+    return '900px'; // Pantallas grandes
   };
 
   // Manejar cambios en los inputs
@@ -247,7 +247,7 @@ const Contact = () => {
           {t('contact.meeting.title')}
         </h2>
         <div className="relative -mx-4 md:mx-0">
-          <div className="w-full max-w-6xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+          <div className="w-full max-w-6xl mx-auto rounded-lg overflow-hidden">
             <InlineWidget
               url="https://calendly.com/volksoft/first-meeting"
               styles={{

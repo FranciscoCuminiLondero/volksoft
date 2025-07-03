@@ -8,14 +8,14 @@ const Footer = () => {
   return (
     <footer className="backdrop-filter backdrop-blur-lg bg-black/30 px-10 text-white p-5 z-100">
       <Container fluid>
-        <Row className="flex flex-col md:flex-row justify-between md:items-start p-x-10">
+        <Row className="flex flex-col md:flex-row justify-between md:items-start p-x-10 gap-4">
           <div className=" text-center md:text-left flex flex-col items-center">
             <img
               src="/assets/logotipo-volksoft-light.png"
               alt="Logo Volksoft"
-              className="mx-auto mb-2 opacity-50 max-w-20"
+              className="mx-auto mb-2 max-w-20"
             />
-            <p className="text-sm ml-2">
+            <p className="text-sm fw-lighter text-light ml-2">
               &copy; {new Date().getFullYear()} {t('footer.copyright')}
             </p>
           </div>
