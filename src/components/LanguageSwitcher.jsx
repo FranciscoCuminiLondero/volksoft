@@ -10,19 +10,23 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex justify-center border px-4 py-2 rounded-md border-gray-300 gap-2 w-25">
+    <div className="flex justify-center border border-gray-600 rounded-lg overflow-hidden bg-black/20 backdrop-blur-sm">
       <button
         onClick={() => changeLanguage('en')}
-        className={`text-sm px-2 py-1 rounded ${
-          i18n.language === 'en' ? 'bg-white text-black' : 'text-white'
+        className={`px-4 py-2 text-sm font-medium transition-all duration-200 flex-1 ${
+          i18n.language === 'en'
+            ? 'bg-white text-black'
+            : 'text-white hover:text-gray-300 hover:bg-white/10'
         }`}
       >
         EN
       </button>
       <button
         onClick={() => changeLanguage('es')}
-        className={`text-sm px-2 py-1 rounded ${
-          i18n.language === 'es' ? 'bg-white text-black' : 'text-white'
+        className={`px-4 py-2 text-sm font-medium transition-all duration-200 flex-1 ${
+          i18n.language === 'es'
+            ? 'bg-white text-black'
+            : 'text-white hover:text-gray-300 hover:bg-white/10'
         }`}
       >
         ES
