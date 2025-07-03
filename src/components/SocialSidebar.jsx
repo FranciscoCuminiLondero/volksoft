@@ -1,12 +1,12 @@
 import React from 'react';
-import { FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaWhatsapp, FaPhone } from 'react-icons/fa';
 
 const SocialSidebar = () => {
   return (
     <div className="fixed right-0 top-1/2 transform -translate-y-1/2 bg-black/30 p-4 rounded-l-2xl z-50">
       <div className="flex flex-col gap-6">
         <a
-          href="https://gmail.com"
+          href="mailto:info@volksoft.io"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-white transition-colors"
@@ -14,7 +14,7 @@ const SocialSidebar = () => {
           <FaEnvelope size={24} />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/volksoft"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-white transition-colors"
@@ -22,12 +22,20 @@ const SocialSidebar = () => {
           <FaLinkedin size={24} />
         </a>
         <a
-          href="https://whatsapp.com"
+          href="https://wa.me/13322312192"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-white transition-colors"
         >
           <FaWhatsapp size={24} />
+        </a>
+        <a
+          href="tel:+13322312192"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+        >
+          <FaPhone size={24} />
         </a>
       </div>
     </div>
