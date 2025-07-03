@@ -16,7 +16,12 @@ const Header = () => {
     };
 
     const handleClickOutside = (event) => {
-      if (isMobileMenuOpen && !event.target.closest('header')) {
+      // Solo cierra si el menú está abierto y el clic no es en el header o en el botón del menú
+      if (
+        isMobileMenuOpen &&
+        !event.target.closest('header') &&
+        !event.target.closest('[aria-label="Toggle mobile menu"]')
+      ) {
         setIsMobileMenuOpen(false);
       }
     };
@@ -28,7 +33,14 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    document.addEventListener('click', handleClickOutside);
+
+    // Añadir un pequeño retraso para evitar conflictos con el toggle
+    if (isMobileMenuOpen) {
+      setTimeout(() => {
+        document.addEventListener('click', handleClickOutside);
+      }, 100);
+    }
+
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
@@ -38,7 +50,8 @@ const Header = () => {
     };
   }, [isMobileMenuOpen]);
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (event) => {
+    event.stopPropagation();
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -113,13 +126,13 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMobileMenu}
-          className="md:hidden text-white hover:text-gray-400 transition-colors p-2"
+          className="md:hidden text-white hover:text-gray-400 transition-colors p-4 -mr-2 touch-manipulation"
           aria-label="Toggle mobile menu"
         >
           {isMobileMenuOpen ? (
-            <FaTimes className="w-6 h-6" />
+            <FaTimes className="w-7 h-7" />
           ) : (
-            <FaBars className="w-6 h-6" />
+            <FaBars className="w-7 h-7" />
           )}
         </button>
       </div>

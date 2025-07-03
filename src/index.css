@@ -62,3 +62,12 @@ html {
 .mobile-menu-enter {
   animation: slideDown 0.3s ease-out forwards;
 }
+
+/* Mejoras para el área táctil en móviles */
+@media (hover: none) and (pointer: coarse) {
+  /* Aumenta el área táctil para dispositivos táctiles */
+  button {
+    min-height: 50px;
+    min-width: 50px;
+  }
+}
