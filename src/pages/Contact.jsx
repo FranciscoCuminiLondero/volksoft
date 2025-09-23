@@ -208,7 +208,7 @@ const Contact = () => {
               <div className="flex items-center gap-4 text-gray-300">
                 <FaPhone className="text-purple-500 text-xl" />
                 <span>
-                  <a href="tel:+13322312192">{t('contact.info.phone')}</a>
+                  <a href="tel:+5491124087607">{t('contact.info.phone')}</a>
                 </span>
               </div>
               <div className="flex items-center gap-4 text-gray-300">
@@ -219,7 +219,7 @@ const Contact = () => {
                 <FaWhatsapp className="text-purple-500 text-xl" />
                 <span>
                   <a
-                    href="https://wa.me/13322312192 "
+                    href="https://wa.me/+5491124087607"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

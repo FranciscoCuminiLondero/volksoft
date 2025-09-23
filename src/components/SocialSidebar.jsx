@@ -22,7 +22,7 @@ const SocialSidebar = () => {
           <FaLinkedin size={24} />
         </a>
         <a
-          href="https://wa.me/13322312192"
+          href="https://wa.me/+5491124087607"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-white transition-colors"
@@ -30,7 +30,7 @@ const SocialSidebar = () => {
           <FaWhatsapp size={24} />
         </a>
         <a
-          href="tel:+13322312192"
+          href="tel:+5491124087607"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-white transition-colors"
