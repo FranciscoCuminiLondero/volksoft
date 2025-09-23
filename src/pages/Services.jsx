@@ -44,7 +44,7 @@ const Services = () => {
                 {t('services.pricing.static.description')}
               </p>{' '}
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-6">
-                {t('services.pricing.static.price')}
+                {/* {t('services.pricing.static.price')} */}
               </div>
               <Link
                 to="/contact"
@@ -69,7 +69,7 @@ const Services = () => {
                 {t('services.pricing.ecommerce.description')}
               </p>{' '}
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-6">
-                {t('services.pricing.ecommerce.price')}
+                {/* {t('services.pricing.ecommerce.price')} */}
               </div>
               <Link
                 to="/contact"
@@ -91,7 +91,7 @@ const Services = () => {
                 {t('services.pricing.custom.description')}
               </p>{' '}
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-6">
-                {t('services.pricing.custom.price')}
+                {/* {t('services.pricing.custom.price')} */}
               </div>
               <Link
                 to="/contact"
