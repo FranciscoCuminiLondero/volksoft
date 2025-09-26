@@ -1,0 +1,260 @@
+/* === ESTILOS PARA COMPONENTES DE BOTONES === */
+
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: none;
+  border-radius: var(--border-radius-full);
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  user-select: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+/* === VARIANTES DE BOTONES === */
+
+/* Botón primario (CTA) */
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  box-shadow: var(--shadow-cyan);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--btn-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-cyan);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  box-shadow: var(--shadow-teal);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--btn-secondary-hover);
+  color: var(--color-navy-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-teal);
+}
+
+.btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Botón outline */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-cyan-bright);
+  border: 2px solid var(--color-cyan-bright);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--color-cyan-bright);
+  color: var(--color-navy-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-cyan);
+}
+
+.btn-outline:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Botón de texto */
+.btn-text {
+  background-color: transparent;
+  color: var(--color-cyan-bright);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.btn-text:hover:not(:disabled) {
+  color: var(--color-teal-medium);
+  background-color: rgba(1, 253, 244, 0.1);
+}
+
+/* Botón con icono únicamente */
+.btn-icon {
+  background-color: transparent;
+  color: var(--color-cyan-bright);
+  padding: var(--spacing-md);
+  width: 48px;
+  height: 48px;
+}
+
+.btn-icon:hover:not(:disabled) {
+  background-color: rgba(1, 253, 244, 0.1);
+  color: var(--color-teal-medium);
+}
+
+/* === TAMAÑOS DE BOTONES === */
+
+/* Pequeño */
+.btn-small {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.875rem;
+  min-height: 36px;
+}
+
+/* Mediano (por defecto) */
+.btn-medium {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1rem;
+  min-height: 44px;
+}
+
+/* Grande */
+.btn-large {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: 1.125rem;
+  min-height: 52px;
+}
+
+/* Extra grande */
+.btn-xlarge {
+  padding: var(--spacing-xl) var(--spacing-3xl);
+  font-size: 1.25rem;
+  min-height: 60px;
+}
+
+/* === ESTADOS === */
+
+/* Deshabilitado */
+.btn-disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Loading */
+.btn-loading {
+  cursor: wait;
+  position: relative;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: btn-spin 1s linear infinite;
+}
+
+@keyframes btn-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === UTILIDADES === */
+
+/* Botón de ancho completo */
+.btn-full-width {
+  width: 100%;
+}
+
+/* Icono dentro del botón */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: inherit;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .btn-base {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 0.875rem;
+  }
+  
+  .btn-small {
+    padding: calc(var(--spacing-xs) * 1.5) var(--spacing-md);
+    font-size: 0.75rem;
+    min-height: 32px;
+  }
+  
+  .btn-medium {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 0.875rem;
+    min-height: 40px;
+  }
+  
+  .btn-large {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1rem;
+    min-height: 48px;
+  }
+  
+  .btn-xlarge {
+    padding: var(--spacing-lg) var(--spacing-2xl);
+    font-size: 1.125rem;
+    min-height: 56px;
+  }
+}
+
+/* === ANIMACIONES ADICIONALES === */
+
+/* Efecto ripple */
+.btn-base::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.btn-base:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-base > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradiente animado para botones primarios */
+.btn-primary {
+  background: linear-gradient(45deg, var(--color-cyan-bright) 0%, var(--color-teal-medium) 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn-primary:hover {
+  animation-duration: 1s;
+}

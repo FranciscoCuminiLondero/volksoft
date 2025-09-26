@@ -6,7 +6,13 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="backdrop-filter backdrop-blur-lg bg-black/30 px-10 text-white p-5 z-100">
+    <footer 
+      className="backdrop-filter backdrop-blur-lg px-10 p-5 z-100"
+      style={{
+        backgroundColor: 'var(--footer-bg)',
+        color: 'var(--footer-text)'
+      }}
+    >
       <Container fluid>
         <Row className="flex flex-col md:flex-row justify-between md:items-start p-x-10 gap-4">
           <div className=" text-center md:text-left flex flex-col items-center">
@@ -26,12 +32,24 @@ const Footer = () => {
             </h4>
             <ul className=" flex list-none p-0 space-x-4 ">
               <li>
-                <Link to="/" className="text-white hover:text-gray-400">
+                <Link 
+                  to="/" 
+                  className="transition-colors duration-300"
+                  style={{ color: 'var(--footer-link)' }}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--footer-link-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--footer-link)'}
+                >
                   {t('footer.navigation.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white hover:text-gray-400">
+                <Link 
+                  to="/services" 
+                  className="transition-colors duration-300"
+                  style={{ color: 'var(--footer-link)' }}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--footer-link-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--footer-link)'}
+                >
                   {t('footer.navigation.services')}
                 </Link>
               </li>
@@ -44,12 +62,24 @@ const Footer = () => {
                 </Link>
               </li> */}
               <li>
-                <Link to="/about" className="text-white hover:text-gray-400">
+                <Link 
+                  to="/about" 
+                  className="transition-colors duration-300"
+                  style={{ color: 'var(--footer-link)' }}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--footer-link-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--footer-link)'}
+                >
                   {t('footer.navigation.about')}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-white hover:text-gray-400">
+                <Link 
+                  to="/contact" 
+                  className="transition-colors duration-300"
+                  style={{ color: 'var(--footer-link)' }}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--footer-link-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--footer-link)'}
+                >
                   {t('footer.navigation.contact')}
                 </Link>
               </li>
@@ -66,7 +96,10 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/volksoft"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-gray-400"
+                  className="transition-colors duration-300"
+                  style={{ color: 'var(--footer-link)' }}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--footer-link-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--footer-link)'}
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin size={24} />

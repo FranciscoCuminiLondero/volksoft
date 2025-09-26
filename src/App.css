@@ -1,6 +1,219 @@
+/* === ESTILOS GLOBALES DE LA APLICACIÓN === */
+
+/* Importar los estilos de componentes */
+@import './components/Button/buttons.css';
+
+/* Variables específicas de la app (complementan colors.css) */
+:root {
+  /* Configuraciones específicas de la aplicación */
+  --app-max-width: 1400px;
+  --app-header-height: 80px;
+  --app-footer-height: 120px;
+  
+  /* Z-index scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* Estilos base del body */
 body {
-  background-color: gradient(to bottom right, rgba(0, 0, 0, 1), #ffffff);
-  background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png');
-  color: #ffffff;
   font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--color-white);
+  background: var(--gradient-hero);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor principal de la aplicación */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* === UTILIDADES ESPECÍFICAS DE LA APP === */
+
+/* Contenedores */
+.container-app {
+  width: 100%;
+  max-width: var(--app-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .container-app {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+/* Secciones */
+.section-app {
+  padding: var(--spacing-4xl) 0;
+}
+
+@media (max-width: 768px) {
+  .section-app {
+    padding: var(--spacing-3xl) 0;
+  }
+}
+
+/* Textos con gradiente */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-cyan-bright) 0%, var(--color-teal-medium) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Cards con efecto hover */
+.card-hover {
+  transition: all var(--transition-base);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2xl);
+}
+
+/* === ANIMACIONES PERSONALIZADAS === */
+
+/* Efecto de aparición suave */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Efecto de flotación */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Efecto de pulse para elementos importantes */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(1, 253, 244, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(1, 253, 244, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(1, 253, 244, 0);
+  }
+}
+
+.pulse-effect {
+  animation: pulse 2s infinite;
+}
+
+/* === EFECTOS DE BACKDROP === */
+.backdrop-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(5, 22, 38, 0.9) 0%,
+    rgba(33, 77, 88, 0.8) 50%,
+    rgba(46, 160, 165, 0.7) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* === LOADING STATES === */
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* === ACCESIBILIDAD === */
+
+/* Focus visible mejorado */
+*:focus-visible {
+  outline: 2px solid var(--color-cyan-bright);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Reducir motion para usuarios que lo prefieran */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .float-animation,
+  .pulse-effect,
+  .loading-shimmer {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-gray-300: #ffffff;
+    --color-gray-400: #ffffff;
+  }
+}
+
+/* === PRINT STYLES === */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .text-gradient {
+    -webkit-text-fill-color: black;
+    color: black;
+  }
 }

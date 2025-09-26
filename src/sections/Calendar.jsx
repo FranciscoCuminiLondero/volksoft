@@ -44,8 +44,8 @@ const Calendar = () => {
               minHeight: '400px',
             }}
             pageSettings={{
-              primaryColor: '#4F1680',
-              textColor: '#000000',
+              primaryColor: '#01fdf4',
+              textColor: '#051626',
               backgroundColor: '#ffffff',
             }}
           />
@@ -54,7 +54,22 @@ const Calendar = () => {
       <div className="flex flex-col justify-center items-center mb-12 md:mb-20">
         <Link
           to={'/contact'}
-          className="inline-flex items-center px-6 py-3 md:px-8 md:py-4 bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 cursor-pointer shadow-2xl hover:shadow-purple-500/25 hover:scale-105 transform text-sm md:text-base"
+          className="btn-base btn-primary text-sm md:text-base transform hover:scale-105 transition-all duration-300"
+          style={{
+            backgroundColor: 'var(--btn-primary-bg)',
+            color: 'var(--btn-primary-text)',
+            boxShadow: 'var(--shadow-cyan)'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = 'var(--btn-primary-hover)';
+            e.target.style.transform = 'translateY(-2px) scale(1.05)';
+            e.target.style.boxShadow = 'var(--shadow-cyan)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = 'var(--btn-primary-bg)';
+            e.target.style.transform = 'translateY(0) scale(1)';
+            e.target.style.boxShadow = 'var(--shadow-lg)';
+          }}
         >
           {t('button.contact-us')}
         </Link>

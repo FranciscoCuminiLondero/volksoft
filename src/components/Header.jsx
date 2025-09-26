@@ -61,9 +61,15 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 transition-colors duration-300 ${
-        isScrolled ? 'bg-black/30' : 'bg-black'
-      } text-white px-6 w-full z-50 shadow-lg`}
+      className={`sticky top-0 transition-all duration-300 ${
+        isScrolled ? 'backdrop-blur backdrop-filter' : ''
+      } px-6 w-full z-50 shadow-lg`}
+      style={{
+        backgroundColor: isScrolled 
+          ? 'rgba(33, 77, 88, 0.9)' 
+          : 'var(--header-bg)',
+        color: 'var(--header-text)'
+      }}
     >
       <div className="flex justify-between items-center py-4">
         {/* Logo */}
@@ -84,7 +90,12 @@ const Header = () => {
               <li>
                 <Link
                   to="/"
-                  className="text-white hover:text-gray-400 transition-colors"
+                  className="text-white transition-colors duration-300"
+                  style={{
+                    '--hover-color': 'var(--header-hover)'
+                  }}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--header-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--header-text)'}
                 >
                   {t('header.home')}
                 </Link>
@@ -92,7 +103,9 @@ const Header = () => {
               <li>
                 <Link
                   to="/services"
-                  className="text-white hover:text-gray-400 transition-colors"
+                  className="text-white transition-colors duration-300"
+                  onMouseEnter={(e) => e.target.style.color = 'var(--header-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--header-text)'}
                 >
                   {t('header.services')}
                 </Link>
@@ -100,7 +113,9 @@ const Header = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-white hover:text-gray-400 transition-colors"
+                  className="text-white transition-colors duration-300"
+                  onMouseEnter={(e) => e.target.style.color = 'var(--header-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--header-text)'}
                 >
                   {t('header.about')}
                 </Link>
@@ -113,7 +128,9 @@ const Header = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-white hover:text-gray-400 transition-colors"
+                  className="text-white transition-colors duration-300"
+                  onMouseEnter={(e) => e.target.style.color = 'var(--header-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--header-text)'}
                 >
                   {t('header.contact')}
                 </Link>
@@ -126,7 +143,10 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMobileMenu}
-          className="md:hidden text-white hover:text-gray-400 transition-colors p-4 -mr-2 touch-manipulation"
+          className="md:hidden text-white transition-colors duration-300 p-4 -mr-2 touch-manipulation"
+          style={{ color: 'var(--header-text)' }}
+          onMouseEnter={(e) => e.target.style.color = 'var(--header-hover)'}
+          onMouseLeave={(e) => e.target.style.color = 'var(--header-text)'}
           aria-label="Toggle mobile menu"
         >
           {isMobileMenuOpen ? (
@@ -139,14 +159,20 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg shadow-lg mobile-menu-enter border-t border-gray-700">
+        <div className="md:hidden absolute top-full left-0 w-full backdrop-blur-lg shadow-lg mobile-menu-enter border-t"
+             style={{
+               backgroundColor: 'rgba(33, 77, 88, 0.95)',
+               borderTopColor: 'var(--color-teal-medium)'
+             }}>
           <nav className="px-6 py-4">
             <ul className="flex flex-col gap-4">
               <li>
                 <Link
                   to="/"
-                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
+                  className="text-white transition-colors duration-300 block py-2 text-lg"
                   onClick={closeMobileMenu}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--header-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--header-text)'}
                 >
                   {t('header.home')}
                 </Link>
@@ -154,8 +180,10 @@ const Header = () => {
               <li>
                 <Link
                   to="/services"
-                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
+                  className="text-white transition-colors duration-300 block py-2 text-lg"
                   onClick={closeMobileMenu}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--header-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--header-text)'}
                 >
                   {t('header.services')}
                 </Link>
@@ -163,8 +191,10 @@ const Header = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
+                  className="text-white transition-colors duration-300 block py-2 text-lg"
                   onClick={closeMobileMenu}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--header-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--header-text)'}
                 >
                   {t('header.about')}
                 </Link>
@@ -181,13 +211,15 @@ const Header = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
+                  className="text-white transition-colors duration-300 block py-2 text-lg"
                   onClick={closeMobileMenu}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--header-hover)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--header-text)'}
                 >
                   {t('header.contact')}
                 </Link>
               </li>
-              <li className="pt-4 border-t border-gray-600">
+              <li className="pt-4 border-t" style={{ borderTopColor: 'var(--color-gray-600)' }}>
                 <LanguageSwitcher />
               </li>
             </ul>

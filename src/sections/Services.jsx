@@ -13,7 +13,14 @@ import {
 const Services = () => {
   const { t } = useTranslation();
   return (
-    <section className="bg-gradient-to-r from-blue-600/20 to-purple-700/20 opacity-bg-70 rounded-2xl py-30 px-10">
+    <section 
+      className="rounded-2xl py-30 px-10 transform hover:scale-[1.02] transition-all duration-500"
+      style={{
+        background: 'linear-gradient(135deg, rgba(33, 77, 88, 0.3) 0%, rgba(46, 160, 165, 0.2) 100%)',
+        backdropFilter: 'blur(10px)',
+        border: '1px solid rgba(46, 160, 165, 0.3)'
+      }}
+    >
       <div className="text-center">
         {/* Title */}
         <h2 className="text-3xl font-bold text-white mb-4">
@@ -27,7 +34,8 @@ const Services = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-center">
           {/* Web Development */}
           <div className="card group relative flex flex-col items-center space-y-2 cursor-pointer">
-            <FaGlobe className="text-purple-500 text-3xl transition-transform duration-300 group-hover:scale-110 mb-4" />
+            <FaGlobe className="transition-transform duration-300 group-hover:scale-110 mb-4 text-3xl" 
+                     style={{ color: 'var(--color-teal-medium)' }} />
             <div className="relative w-full">
               <a
                 href="#web-development"
@@ -45,7 +53,8 @@ const Services = () => {
 
           {/* Landing Pages */}
           <div className="card group relative flex flex-col items-center space-y-2 cursor-pointer">
-            <FaFileAlt className="text-blue-500 text-3xl transition-transform duration-300 group-hover:scale-110 mb-4" />
+            <FaFileAlt className="transition-transform duration-300 group-hover:scale-110 mb-4 text-3xl" 
+                       style={{ color: 'var(--color-cyan-bright)' }} />
             <div className="relative w-full">
               <a
                 href="#landing-page"
@@ -63,7 +72,8 @@ const Services = () => {
 
           {/* Portfolios */}
           <div className="card group relative flex flex-col items-center space-y-2 cursor-pointer">
-            <FaRegUser className="text-green-500 text-3xl transition-transform duration-300 group-hover:scale-110 mb-4" />
+            <FaRegUser className="transition-transform duration-300 group-hover:scale-110 mb-4 text-3xl" 
+                       style={{ color: 'var(--color-teal-dark)' }} />
             <div className="relative w-full">
               <a
                 href="#portfolio"
@@ -81,7 +91,8 @@ const Services = () => {
 
           {/* Blogs */}
           <div className="card group relative flex flex-col items-center space-y-2 cursor-pointer">
-            <FaBlog className="text-red-500 text-3xl transition-transform duration-300 group-hover:scale-110 mb-4" />
+            <FaBlog className="transition-transform duration-300 group-hover:scale-110 mb-4 text-3xl" 
+                    style={{ color: 'var(--color-error)' }} />
             <div className="relative w-full">
               <a
                 href="#blogs"
@@ -98,7 +109,8 @@ const Services = () => {
           </div>
           {/* One Pages */}
           <div className="card group relative flex flex-col items-center space-y-2 cursor-pointer">
-            <FaElementor className="text-yellow-500 text-3xl transition-transform duration-300 group-hover:scale-110 mb-4" />
+            <FaElementor className="transition-transform duration-300 group-hover:scale-110 mb-4 text-3xl" 
+                         style={{ color: 'var(--color-warning)' }} />
             <div className="relative w-full">
               <a
                 href="#one-pages"
@@ -125,7 +137,22 @@ const Services = () => {
             </p>
             <Link
               to="/services"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 hover:scale-105 transform"
+              className="btn-base btn-primary transform hover:scale-105 transition-all duration-300"
+              style={{
+                backgroundColor: 'var(--btn-primary-bg)',
+                color: 'var(--btn-primary-text)',
+                boxShadow: 'var(--shadow-cyan)'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = 'var(--btn-primary-hover)';
+                e.target.style.transform = 'translateY(-2px) scale(1.05)';
+                e.target.style.boxShadow = 'var(--shadow-cyan)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = 'var(--btn-primary-bg)';
+                e.target.style.transform = 'translateY(0) scale(1)';
+                e.target.style.boxShadow = 'var(--shadow-lg)';
+              }}
             >
               <span className="mr-2">{t('services.cta.button')}</span>
               <FaArrowRight className="text-lg" />

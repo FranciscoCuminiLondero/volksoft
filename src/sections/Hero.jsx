@@ -7,7 +7,12 @@ import Logo from '../../public/assets/logotipo-volksoft-light.png';
 const Hero = () => {
   const { t } = useTranslation();
   return (
-    <section className="bg-transparent min-h-screen flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-8">
+    <section 
+      className="bg-transparent min-h-screen flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-8"
+      style={{ 
+        color: 'var(--hero-text)'
+      }}
+    >
       <div className="max-w-7xl mx-auto w-full">
         {/* Logo y contenido principal */}
         <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 mb-8 lg:mb-16">
@@ -22,7 +27,22 @@ const Hero = () => {
               </p>              <div className="flex justify-center lg:justify-start">
                 <Link
                   to="/services"
-                  className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 cursor-pointer shadow-2xl hover:shadow-purple-500/25 hover:scale-105 transform text-base sm:text-lg"
+                  className="btn-base btn-primary text-base sm:text-lg transform hover:scale-105 transition-all duration-300"
+                  style={{
+                    backgroundColor: 'var(--hero-cta-bg)',
+                    color: 'var(--hero-cta-text)',
+                    boxShadow: 'var(--shadow-cyan)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = 'var(--btn-primary-hover)';
+                    e.target.style.transform = 'translateY(-2px) scale(1.05)';
+                    e.target.style.boxShadow = 'var(--shadow-cyan)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = 'var(--hero-cta-bg)';
+                    e.target.style.transform = 'translateY(0) scale(1)';
+                    e.target.style.boxShadow = 'var(--shadow-lg)';
+                  }}
                 >
                   <span>{t('button.get-started')}</span>
                   <FaAngleDown className="ml-2 sm:ml-3 text-lg sm:text-xl" />
@@ -39,7 +59,12 @@ const Hero = () => {
                 className="w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-contain drop-shadow-2xl transition-all duration-300 hover:scale-110 transform"
               />
               {/* Efecto de resplandor hover */}
-              <div className="absolute inset-0 w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 xl:w-56 xl:h-56 bg-gradient-to-br from-purple-500/40 to-blue-500/40 rounded-full blur-xl -z-10 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+              <div 
+                className="absolute inset-0 w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-full blur-xl -z-10 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                style={{
+                  background: 'radial-gradient(circle, rgba(1, 253, 244, 0.4) 0%, rgba(46, 160, 165, 0.2) 50%, transparent 70%)'
+                }}
+              ></div>
             </div>
           </div>
         </div>

@@ -6,8 +6,16 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative bg-gradient-to-r from-blue-600/10 to-purple-700/10 rounded-2xl py-16 px-8 transform hover:scale-[1.02] transition-all duration-500">
-      <div className="absolute inset-0 bg-black/20 rounded-2xl backdrop-blur-sm"></div>
+    <section 
+      className="relative rounded-2xl py-16 px-8 transform hover:scale-[1.02] transition-all duration-500"
+      style={{
+        background: 'linear-gradient(135deg, rgba(33, 77, 88, 0.2) 0%, rgba(46, 160, 165, 0.1) 100%)',
+        backdropFilter: 'blur(10px)',
+        border: '1px solid rgba(46, 160, 165, 0.3)'
+      }}
+    >
+      <div className="absolute inset-0 rounded-2xl backdrop-blur-sm"
+           style={{ backgroundColor: 'rgba(5, 22, 38, 0.2)' }}></div>
       <div className="relative max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -30,19 +38,19 @@ const About = () => {
             {/* Key Points */}
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-4">
-                <FaRocket className="text-purple-500 text-xl flex-shrink-0" />
+                <FaRocket className="flex-shrink-0 text-xl" style={{ color: 'var(--color-cyan-bright)' }} />
                 <span className="text-gray-300">
                   {t('about.section.point1')}
                 </span>
               </div>
               <div className="flex items-center gap-4">
-                <FaLightbulb className="text-blue-500 text-xl flex-shrink-0" />
+                <FaLightbulb className="flex-shrink-0 text-xl" style={{ color: 'var(--color-teal-medium)' }} />
                 <span className="text-gray-300">
                   {t('about.section.point2')}
                 </span>
               </div>
               <div className="flex items-center gap-4">
-                <FaUsers className="text-green-500 text-xl flex-shrink-0" />
+                <FaUsers className="flex-shrink-0 text-xl" style={{ color: 'var(--color-success)' }} />
                 <span className="text-gray-300">
                   {t('about.section.point3')}
                 </span>
@@ -52,7 +60,22 @@ const About = () => {
             {/* CTA Button */}
             <Link
               to="/about"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 hover:scale-105 transform"
+              className="btn-base btn-primary transform hover:scale-105 transition-all duration-300"
+              style={{
+                backgroundColor: 'var(--btn-primary-bg)',
+                color: 'var(--btn-primary-text)',
+                boxShadow: 'var(--shadow-cyan)'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = 'var(--btn-primary-hover)';
+                e.target.style.transform = 'translateY(-2px) scale(1.05)';
+                e.target.style.boxShadow = 'var(--shadow-cyan)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = 'var(--btn-primary-bg)';
+                e.target.style.transform = 'translateY(0) scale(1)';
+                e.target.style.boxShadow = 'var(--shadow-lg)';
+              }}
             >
               <span className="mr-2">{t('about.section.button')}</span>
               <FaArrowRight className="text-lg" />
@@ -60,8 +83,22 @@ const About = () => {
           </div>{' '}
           {/* Right Side - Stats */}
           <div className="grid grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
-              <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-2">
+            <div 
+              className="rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(1, 253, 244, 0.2) 0%, rgba(46, 160, 165, 0.2) 100%)',
+                border: '1px solid rgba(1, 253, 244, 0.3)'
+              }}
+            >
+              <div 
+                className="text-3xl font-bold mb-2"
+                style={{
+                  background: 'linear-gradient(135deg, var(--color-cyan-bright) 0%, var(--color-teal-medium) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
                 {t('about.stats.technologies')}
               </div>
               <div className="text-gray-300 text-sm">
@@ -69,8 +106,22 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
-              <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-2">
+            <div 
+              className="rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(1, 253, 244, 0.2) 0%, rgba(46, 160, 165, 0.2) 100%)',
+                border: '1px solid rgba(1, 253, 244, 0.3)'
+              }}
+            >
+              <div 
+                className="text-3xl font-bold mb-2"
+                style={{
+                  background: 'linear-gradient(135deg, var(--color-cyan-bright) 0%, var(--color-teal-medium) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
                 {t('about.stats.experience')}
               </div>
               <div className="text-gray-300 text-sm">
@@ -78,8 +129,22 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
-              <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-2">
+            <div 
+              className="rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(1, 253, 244, 0.2) 0%, rgba(46, 160, 165, 0.2) 100%)',
+                border: '1px solid rgba(1, 253, 244, 0.3)'
+              }}
+            >
+              <div 
+                className="text-3xl font-bold mb-2"
+                style={{
+                  background: 'linear-gradient(135deg, var(--color-cyan-bright) 0%, var(--color-teal-medium) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
                 {t('about.stats.delivery')}
               </div>
               <div className="text-gray-300 text-sm">
@@ -87,8 +152,22 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
-              <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-2">
+            <div 
+              className="rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(1, 253, 244, 0.2) 0%, rgba(46, 160, 165, 0.2) 100%)',
+                border: '1px solid rgba(1, 253, 244, 0.3)'
+              }}
+            >
+              <div 
+                className="text-3xl font-bold mb-2"
+                style={{
+                  background: 'linear-gradient(135deg, var(--color-cyan-bright) 0%, var(--color-teal-medium) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
                 {t('about.stats.innovation')}
               </div>
               <div className="text-gray-300 text-sm">
