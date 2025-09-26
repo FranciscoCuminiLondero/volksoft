@@ -120,7 +120,15 @@ const Contact = () => {
       {' '}
       {/* Hero Section */}
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-white mb-4">
+        <h1 
+          className="text-4xl font-bold mb-4 text-gradient"
+          style={{
+            background: 'linear-gradient(135deg, var(--color-cyan-bright) 0%, var(--color-teal-medium) 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
+        >
           {t('contact.title')}
         </h1>
         <p className="text-gray-300 text-xl max-w-3xl mx-auto">
@@ -129,7 +137,13 @@ const Contact = () => {
       </section>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
         {/* Contact Form */}
-        <section className="bg-black/30 rounded-2xl p-6 md:p-8">
+        <section className="rounded-2xl p-6 md:p-8"
+                 style={{
+                   background: 'linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-teal-dark) 100%)',
+                   border: '1px solid var(--color-teal-dark)',
+                   boxShadow: '0 20px 50px rgba(1, 253, 244, 0.1)'
+                 }}
+        >
           <form className="space-y-6" onSubmit={handleSubmit}>
             {/* Mensaje de estado */}
             {statusMessage && (
@@ -154,7 +168,19 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-black/20 rounded-lg border border-gray-600 text-white p-3 focus:outline-none focus:border-purple-500"
+                className="w-full rounded-lg border text-white p-3 focus:outline-none transition-all duration-300"
+                style={{
+                  backgroundColor: 'var(--color-navy-deep)',
+                  borderColor: 'var(--color-teal-dark)',
+                }}
+                onFocus={(e) => {
+                  e.target.style.borderColor = 'var(--color-cyan-bright)';
+                  e.target.style.boxShadow = '0 0 0 2px rgba(1, 253, 244, 0.2)';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = 'var(--color-teal-dark)';
+                  e.target.style.boxShadow = 'none';
+                }}
               />
             </div>
             <div>
@@ -167,7 +193,19 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-black/20 rounded-lg border border-gray-600 text-white p-3 focus:outline-none focus:border-purple-500"
+                className="w-full rounded-lg border text-white p-3 focus:outline-none transition-all duration-300"
+                style={{
+                  backgroundColor: 'var(--color-navy-deep)',
+                  borderColor: 'var(--color-teal-dark)',
+                }}
+                onFocus={(e) => {
+                  e.target.style.borderColor = 'var(--color-cyan-bright)';
+                  e.target.style.boxShadow = '0 0 0 2px rgba(1, 253, 244, 0.2)';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = 'var(--color-teal-dark)';
+                  e.target.style.boxShadow = 'none';
+                }}
               />
             </div>
             <div>
@@ -180,17 +218,46 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-black/20 rounded-lg border border-gray-600 text-white p-3 focus:outline-none focus:border-purple-500"
+                className="w-full rounded-lg border text-white p-3 focus:outline-none transition-all duration-300"
+                style={{
+                  backgroundColor: 'var(--color-navy-deep)',
+                  borderColor: 'var(--color-teal-dark)',
+                }}
+                onFocus={(e) => {
+                  e.target.style.borderColor = 'var(--color-cyan-bright)';
+                  e.target.style.boxShadow = '0 0 0 2px rgba(1, 253, 244, 0.2)';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = 'var(--color-teal-dark)';
+                  e.target.style.boxShadow = 'none';
+                }}
               ></textarea>
             </div>
             <button
               type="submit"
               disabled={isLoading}
-              className={`w-full font-bold py-3 px-6 rounded-lg transition duration-300 ${
-                isLoading
-                  ? 'bg-gray-600 cursor-not-allowed text-gray-300'
-                  : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white'
-              }`}
+              className="w-full font-bold py-3 px-6 rounded-lg transition duration-300 text-white"
+              style={{
+                background: isLoading 
+                  ? '#6b7280' 
+                  : 'linear-gradient(135deg, var(--color-cyan-bright) 0%, var(--color-teal-medium) 100%)',
+                cursor: isLoading ? 'not-allowed' : 'pointer',
+                boxShadow: isLoading 
+                  ? 'none' 
+                  : '0 10px 30px rgba(1, 253, 244, 0.3)'
+              }}
+              onMouseEnter={(e) => {
+                if (!isLoading) {
+                  e.target.style.transform = 'translateY(-2px)';
+                  e.target.style.boxShadow = '0 15px 40px rgba(1, 253, 244, 0.4)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!isLoading) {
+                  e.target.style.transform = 'translateY(0px)';
+                  e.target.style.boxShadow = '0 10px 30px rgba(1, 253, 244, 0.3)';
+                }
+              }}
             >
               {isLoading ? t('contact.form.sending') : t('contact.form.submit')}
             </button>
@@ -200,23 +267,38 @@ const Contact = () => {
         {/* Contact Information */}
         <section className="space-y-8">
           {' '}
-          <div className="bg-black/30 rounded-2xl p-6 md:p-8">
+          <div className="rounded-2xl p-6 md:p-8"
+               style={{
+                 background: 'linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-teal-dark) 100%)',
+                 border: '1px solid var(--color-teal-dark)',
+                 boxShadow: '0 20px 50px rgba(1, 253, 244, 0.1)'
+               }}
+          >
             <h3 className="text-2xl font-bold text-white mb-6">
               {t('contact.info.title')}
             </h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4 text-gray-300">
-                <FaPhone className="text-purple-500 text-xl" />
+                <FaPhone 
+                  className="text-xl"
+                  style={{ color: 'var(--color-cyan-bright)' }} 
+                />
                 <span>
                   <a href="tel:+5491124087607">{t('contact.info.phone')}</a>
                 </span>
               </div>
               <div className="flex items-center gap-4 text-gray-300">
-                <FaEnvelope className="text-purple-500 text-xl" />
+                <FaEnvelope 
+                  className="text-xl"
+                  style={{ color: 'var(--color-cyan-bright)' }} 
+                />
                 <span>{t('contact.info.email')}</span>
               </div>
               <div className="flex items-center gap-4 text-gray-300">
-                <FaWhatsapp className="text-purple-500 text-xl" />
+                <FaWhatsapp 
+                  className="text-xl"
+                  style={{ color: 'var(--color-cyan-bright)' }} 
+                />
                 <span>
                   <a
                     href="https://wa.me/+5491124087607"
@@ -229,7 +311,13 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="bg-black/30 rounded-2xl p-6 md:p-8">
+          <div className="rounded-2xl p-6 md:p-8"
+               style={{
+                 background: 'linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-teal-dark) 100%)',
+                 border: '1px solid var(--color-teal-dark)',
+                 boxShadow: '0 20px 50px rgba(1, 253, 244, 0.1)'
+               }}
+          >
             <h3 className="text-2xl font-bold text-white mb-6">
               {t('contact.schedule.title')}
             </h3>
@@ -242,7 +330,13 @@ const Contact = () => {
         </section>
       </div>{' '}
       {/* Calendly Integration */}
-      <section className="bg-black/30 rounded-2xl p-4 md:p-8">
+      <section className="rounded-2xl p-4 md:p-8"
+               style={{
+                 background: 'linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-teal-dark) 100%)',
+                 border: '1px solid var(--color-teal-dark)',
+                 boxShadow: '0 20px 50px rgba(1, 253, 244, 0.1)'
+               }}
+      >
         <h2 className="text-xl md:text-2xl font-bold text-white text-center mb-4 md:mb-6">
           {t('contact.meeting.title')}
         </h2>
@@ -256,7 +350,7 @@ const Contact = () => {
                 minHeight: '400px',
               }}
               pageSettings={{
-                primaryColor: '#4F1680',
+                primaryColor: '#01fdf4',
                 textColor: '#000000',
                 backgroundColor: '#ffffff',
               }}
