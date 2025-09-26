@@ -63,22 +63,22 @@ const Header = () => {
     <header
       className={`sticky top-0 transition-all duration-300 ${
         isScrolled ? 'backdrop-blur backdrop-filter' : ''
-      } px-6 w-full z-50 shadow-lg`}
+      } px-6 w-full z-50 shadow-lg mb-8`}
       style={{
         backgroundColor: isScrolled 
-          ? 'rgba(33, 77, 88, 0.9)' 
+          ? 'rgba(33, 77, 88, 0.7)' 
           : 'var(--header-bg)',
         color: 'var(--header-text)'
       }}
     >
-      <div className="flex justify-between items-center py-4">
+      <div className="flex justify-between items-center py-2">
         {/* Logo */}
         <div className="flex items-center">
           <Link to="/" className="m-0 p-0">
             <img
               src="./assets/logotipo-light.png"
               alt="Logo Volksoft"
-              className="w-50"
+              className="w-40"
             />
           </Link>
         </div>
