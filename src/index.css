@@ -1,5 +1,12 @@
 @import 'tailwindcss';
 
+/* Volk brand tokens */
+@theme {
+  --color-volk-black: #0a0a0a;
+  --color-volk-green: #b8ff3d;
+  --color-volk-white: #ffffff;
+}
+
 /* Animaciones para transiciones de página */
 @keyframes fadeInUp {
   from {

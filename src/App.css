@@ -1,6 +1,5 @@
 body {
-  background-color: gradient(to bottom right, rgba(0, 0, 0, 1), #ffffff);
-  background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png');
+  background-color: #0a0a0a;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
 }
