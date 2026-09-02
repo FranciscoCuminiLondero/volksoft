@@ -5,6 +5,11 @@
   --color-volk-black: #0a0a0a;
   --color-volk-green: #b8ff3d;
   --color-volk-white: #ffffff;
+
+  /* Titles: CY Grotesk STD (falls back to Inter until the licensed font
+     files are added — see src/fonts/README.md). Body text: Inter. */
+  --font-heading: 'CY Grotesk STD', 'Inter', sans-serif;
+  --font-sans: 'Inter', sans-serif;
 }
 
 /* Animaciones para transiciones de página */
