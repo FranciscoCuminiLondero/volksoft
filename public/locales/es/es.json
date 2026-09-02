@@ -2,141 +2,73 @@
   "header": {
     "home": "Inicio",
     "services": "Servicios",
+    "portfolio": "Casos",
     "about": "Nosotros",
-    "portfolio": "Portafolio",
     "contact": "Contacto"
   },
   "home": {
-    "title": "Transformando ideas en software",
-    "subtitle": "Herramientas para ayudarte a crear el sitio web de tus sueños.",
-    "description": "Somos un equipo de desarrolladores de software apasionados, dedicados a crear soluciones innovadoras para empresas de todos los tamaños. Con experiencia en tecnologías de vanguardia y un compromiso con la excelencia, transformamos ideas en realidad."
+    "title": "Software que funciona. Resultados que se notan.",
+    "description": "Diseñamos y desarrollamos sitios web y productos digitales con foco en resultados: rápidos, sólidos y pensados para convertir visitas en clientes."
   },
   "services": {
-    "title": "Lo que hacemos",
-    "subtitle": "Nos especializamos en crear sitios web y soluciones digitales para empresas, emprendedores y creativos.",
+    "title": "Servicios",
+    "subtitle": "Soluciones digitales a medida, de la primera línea de código a la entrega.",
     "cards": {
       "web-development": {
         "title": "Desarrollo Web",
-        "description": "Creamos sitios web hermosos que están optimizados para motores de búsqueda y experiencia de usuario."
+        "description": "Sitios web rápidos, seguros y optimizados para buscadores."
       },
       "landing-page": {
-        "title": "Páginas de Destino",
-        "description": "Página web independiente diseñada para convertir visitantes alentándolos a realizar una acción específica, como registrarse o hacer una compra."
+        "title": "Landing Pages",
+        "description": "Páginas diseñadas para convertir visitas en clientes."
       },
       "portfolio": {
-        "title": "Portafolio",
-        "description": "Nuestro portafolio muestra nuestro trabajo en acción, desde desarrollo web hasta desarrollo de aplicaciones y gestión de datos."
+        "title": "Portafolios",
+        "description": "Presentá tu trabajo con una web profesional y a medida."
       },
       "blogs": {
         "title": "Blogs",
-        "description": "Nuestra sección de blog ofrece información valiosa sobre las últimas tendencias y técnicas en desarrollo web."
+        "description": "Contenido propio, publicado en una plataforma que vos controlás."
       },
       "one-pages": {
-        "title": "Páginas Únicas",
-        "description": "Creamos sitios web únicos y atractivos que destacan de la multitud."
+        "title": "One Pages",
+        "description": "Un sitio simple, directo y efectivo para tu marca."
       }
     },
     "cta": {
-      "title": "¿Listo para comenzar tu proyecto?",
-      "description": "Contáctanos hoy y descubre cómo podemos ayudarte a llevar tu idea al siguiente nivel con nuestras soluciones personalizadas.",
-      "button": "Conocer servicios"
-    },
-    "pricing": {
-      "title": "Nuestros Planes",
-      "static": {
-        "title": "Web Estática",
-        "description": "Página web profesional y moderna, perfecta para presentar tu negocio o servicio.",
-        "price": "USD $300"
-      },
-      "ecommerce": {
-        "title": "E-commerce",
-        "description": "Tienda en línea completa con carrito de compras y procesamiento de pagos.",
-        "price": "USD $500",
-        "badge": "Popular"
-      },
-      "custom": {
-        "title": "Personalizada",
-        "description": "Soluciones web a medida para necesidades específicas de tu negocio.",
-        "price": "Consultar"
-      }
-    },
-    "technologies": {
-      "title": "Tecnologías que Utilizamos"
-    },
-    "process": {
-      "title": "Nuestro Proceso de Trabajo",
-      "step1": {
-        "title": "Llamada Inicial",
-        "description": "Una breve llamada donde nos cuentas tu visión y necesidades. Sin compromisos, solo queremos conocerte y entender tu proyecto."
-      },
-      "step2": {
-        "title": "Desarrollo Personalizado",
-        "description": "Nos encargamos de todo el proceso técnico, desde el diseño hasta la implementación, adaptándonos a tus necesidades específicas."
-      },
-      "step3": {
-        "title": "Entrega y Soporte",
-        "description": "Implementamos tu solución y te brindamos el soporte necesario para asegurar su éxito continuo."
-      }
+      "title": "¿Listo para empezar tu proyecto?",
+      "description": "Contanos qué necesitás y te mostramos cómo podemos ayudarte.",
+      "button": "Hablemos"
     }
   },
+  "cases": {
+    "title": "Casos reales",
+    "subtitle": "Proyectos que ya entregamos, con resultados concretos."
+  },
   "about": {
-    "title": "Acerca de Nosotros",
-    "subtitle": "Conoce más sobre nuestra pasión por crear soluciones digitales innovadoras que transforman ideas en realidad.",
     "section": {
-      "title": "¿Quiénes Somos?",
-      "subtitle": "Un equipo apasionado por la tecnología y la innovación",
-      "description": "Somos Volksoft, una empresa emergente dedicada al desarrollo de software con un enfoque fresco e innovador. Nos especializamos en desarrollo web, aplicaciones móviles y consultoría tecnológica, combinando las últimas tecnologías con ideas creativas.",
-      "point1": "Proyectos en desarrollo con tecnologías modernas",
-      "point2": "Tecnologías de vanguardia y mejores prácticas",
-      "point3": "Equipo joven, dinámico y con ganas de crecer",
-      "button": "Conocer Más"
-    },
-    "mission": {
-      "title": "Nuestra Misión",
-      "description": "Crear soluciones digitales innovadoras y de alta calidad que generen valor real para nuestros clientes, estableciendo relaciones duraderas basadas en la confianza y el crecimiento mutuo."
-    },
-    "vision": {
-      "title": "Nuestra Visión",
-      "description": "Convertirnos en una empresa líder en desarrollo de software, reconocida por nuestra creatividad, innovación y capacidad de adaptarnos a las nuevas tecnologías del mercado."
-    },
-    "values": {
-      "title": "Nuestros Valores",
-      "description": "Innovación, transparencia, compromiso con la calidad y pasión por aprender son los principios que nos impulsan a dar lo mejor en cada proyecto."
-    },
-    "story": {
-      "title": "Nuestra Historia",
-      "paragraph1": "Volksoft nació de la pasión por la tecnología y el deseo de crear soluciones que marquen la diferencia. Somos una empresa completamente nueva, fundada con la visión de ofrecer desarrollo de software de calidad.",
-      "paragraph2": "Estamos en el inicio de nuestro camino, listos para tomar nuestros primeros proyectos y construir relaciones duraderas con clientes que confíen en nuestro potencial y dedicación."
+      "title": "Quiénes somos",
+      "subtitle": "Un equipo enfocado en construir software serio, sin vueltas.",
+      "description": "Somos Volk, un equipo de desarrollo de software especializado en construir productos digitales sólidos. Combinamos tecnología moderna con un proceso claro, de principio a fin.",
+      "point1": "Procesos claros y comunicación directa",
+      "point2": "Tecnologías modernas y buenas prácticas",
+      "point3": "Un equipo comprometido con cada proyecto",
+      "button": "Hablemos"
     },
     "stats": {
       "technologies": "10+",
-      "technologiesLabel": "Tecnologías Dominadas",
+      "technologiesLabel": "Tecnologías",
       "experience": "24/7",
-      "experienceLabel": "Soporte Disponible",
+      "experienceLabel": "Soporte",
       "delivery": "100%",
-      "deliveryLabel": "Compromiso de Calidad",
+      "deliveryLabel": "Compromiso",
       "innovation": "∞",
-      "innovationLabel": "Ideas Creativas"
-    },
-    "whyChoose": {
-      "title": "¿Por Qué Elegirnos?",
-      "experience": {
-        "title": "Perspectiva Fresca",
-        "description": "Somos una empresa nueva con ideas frescas y un enfoque moderno para resolver problemas tecnológicos complejos."
-      },
-      "innovation": {
-        "title": "Innovación Constante",
-        "description": "Utilizamos las últimas tecnologías y metodologías del mercado para garantizar soluciones modernas y escalables."
-      },
-      "dedication": {
-        "title": "Compromiso Total",
-        "description": "Como empresa emergente, cada proyecto es una oportunidad de crecimiento y recibe nuestra máxima dedicación y atención personalizada."
-      }
+      "innovationLabel": "Ideas"
     }
   },
   "contact": {
-    "title": "Contáctanos",
-    "subtitle": "Estamos aquí para ayudarte a hacer realidad tu proyecto",
+    "title": "Contactanos",
+    "subtitle": "Contanos tu proyecto y te respondemos a la brevedad.",
     "form": {
       "name": "Nombre",
       "email": "Correo Electrónico",
@@ -148,9 +80,8 @@
     },
     "info": {
       "title": "Información de Contacto",
-      "location": "Ciudad, País",
       "phone": "+54 9 11 2408-7607",
-      "email": "info@volksoft.io",
+      "email": "info@volk.io",
       "whatsapp": "+54 9 11 2408-7607"
     },
     "schedule": {
@@ -158,29 +89,10 @@
       "weekdays": "Lunes - Viernes: 9:00 AM - 6:00 PM",
       "saturday": "Sábado: 10:00 AM - 2:00 PM",
       "sunday": "Domingo: Cerrado"
-    },
-    "meeting": {
-      "title": "Agenda una Reunión"
     }
   },
-  "portfolio": {
-    "title": "Portafolio",
-    "subtitle": "Nuestro trabajo en acción.",
-    "description": "Creamos productos que son únicos y atractivos.",
-    "cards": {
-      "web-ejemplo": {
-        "title": "Ejemplo de página web",
-        "description": "Un sitio web que es único y atractivo."
-      }
-    }
-  },
-  "calendar": {
-    "title": "Calendario",
-    "description": "Nuestra sección de calendario ofrece información valiosa sobre las últimas tendencias y técnicas en desarrollo web."
-  },
-
   "footer": {
-    "copyright": "Volksoft. Todos los derechos reservados.",
+    "copyright": "Volk. Todos los derechos reservados.",
     "social-media": {
       "title": "Síguenos"
     },
@@ -188,15 +100,15 @@
       "title": "Navegación",
       "home": "Inicio",
       "services": "Servicios",
-      "portfolio": "Portafolio",
+      "portfolio": "Casos",
       "contact": "Contacto",
       "about": "Nosotros"
     }
   },
   "button": {
     "get-started": "Comenzar",
-    "look-work": "¡Mira este trabajo!",
-    "contact-us": "Contáctanos!",
+    "look-work": "Ver proyecto",
+    "contact-us": "Contáctanos",
     "contact": "Contactar"
   }
 }
