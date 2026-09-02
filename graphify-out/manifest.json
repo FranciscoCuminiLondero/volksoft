@@ -1,0 +1,206 @@
+{
+  "eslint.config.js": {
+    "mtime": 1787352973.140978,
+    "seen": 1788307837.7279255,
+    "ast_hash": "bcb22cc5b9b86c67f53ad73b1855f082",
+    "semantic_hash": "bcb22cc5b9b86c67f53ad73b1855f082"
+  },
+  "package.json": {
+    "mtime": 1787353366.9449632,
+    "seen": 1788307837.7279305,
+    "ast_hash": "3b5e66343ff19d8a1d764bf8a865185c",
+    "semantic_hash": "3b5e66343ff19d8a1d764bf8a865185c"
+  },
+  "public/locales/en/en.json": {
+    "mtime": 1787352973.15091,
+    "seen": 1788307837.7279327,
+    "ast_hash": "293c8784abddcfef488222bbcc9de109",
+    "semantic_hash": "293c8784abddcfef488222bbcc9de109"
+  },
+  "public/locales/es/es.json": {
+    "mtime": 1787352973.15091,
+    "seen": 1788307837.7279341,
+    "ast_hash": "9a2ec898a351ab3b442b026fedeecf35",
+    "semantic_hash": "9a2ec898a351ab3b442b026fedeecf35"
+  },
+  "src/App.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279353,
+    "ast_hash": "3f08abbfbaae0cb9ca3fc5ee64e77505",
+    "semantic_hash": "3f08abbfbaae0cb9ca3fc5ee64e77505"
+  },
+  "src/components/Footer.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279365,
+    "ast_hash": "8ee0a866d9f4fab38c9d186816061b54",
+    "semantic_hash": "8ee0a866d9f4fab38c9d186816061b54"
+  },
+  "src/components/Header.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279375,
+    "ast_hash": "9bad94b87a3e8110963b8c42915fda0d",
+    "semantic_hash": "9bad94b87a3e8110963b8c42915fda0d"
+  },
+  "src/components/LanguageSwitcher.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279387,
+    "ast_hash": "93c70b82565e333eb4ba35d8d798830e",
+    "semantic_hash": "93c70b82565e333eb4ba35d8d798830e"
+  },
+  "src/components/PageTransition.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279396,
+    "ast_hash": "95023ce55b254f23ad88939276748ca8",
+    "semantic_hash": "95023ce55b254f23ad88939276748ca8"
+  },
+  "src/components/SocialSidebar.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279406,
+    "ast_hash": "2af0e418f6e039f9d6a1afb67817e0c9",
+    "semantic_hash": "2af0e418f6e039f9d6a1afb67817e0c9"
+  },
+  "src/components/TechCarousel.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279415,
+    "ast_hash": "cdcfa92e0ced4c2d4b419cec9be625fd",
+    "semantic_hash": "cdcfa92e0ced4c2d4b419cec9be625fd"
+  },
+  "src/i18n/i18n.js": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.727943,
+    "ast_hash": "ad925c9986037ab0a475692e0344bf58",
+    "semantic_hash": "ad925c9986037ab0a475692e0344bf58"
+  },
+  "src/main.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.727944,
+    "ast_hash": "3cac77befea526efcd49efba4cb56c35",
+    "semantic_hash": "3cac77befea526efcd49efba4cb56c35"
+  },
+  "src/pages/About.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279453,
+    "ast_hash": "46ce12fa558afe2fc68c66401358f7aa",
+    "semantic_hash": "46ce12fa558afe2fc68c66401358f7aa"
+  },
+  "src/pages/Contact.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.727946,
+    "ast_hash": "aece5c4be4151beebafd4544640dfa29",
+    "semantic_hash": "aece5c4be4151beebafd4544640dfa29"
+  },
+  "src/pages/Home.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.727947,
+    "ast_hash": "54cf3de11516ac990f029bb85f9a1541",
+    "semantic_hash": "54cf3de11516ac990f029bb85f9a1541"
+  },
+  "src/pages/Layout.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.727948,
+    "ast_hash": "371b2a52c61066dd8614eab1040d99aa",
+    "semantic_hash": "371b2a52c61066dd8614eab1040d99aa"
+  },
+  "src/pages/Portfolio.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279491,
+    "ast_hash": "1466f334efa175894d95e1d94b2781ed",
+    "semantic_hash": "1466f334efa175894d95e1d94b2781ed"
+  },
+  "src/pages/Services.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.72795,
+    "ast_hash": "0c7c2e19f5e1f8a4aa1f9761793ca9f9",
+    "semantic_hash": "0c7c2e19f5e1f8a4aa1f9761793ca9f9"
+  },
+  "src/router.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.727951,
+    "ast_hash": "77f37d2d1509ea73164abe8509027258",
+    "semantic_hash": "77f37d2d1509ea73164abe8509027258"
+  },
+  "src/sections/About.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279522,
+    "ast_hash": "471dd06826af149ea9da379a10e8d54e",
+    "semantic_hash": "471dd06826af149ea9da379a10e8d54e"
+  },
+  "src/sections/Calendar.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279532,
+    "ast_hash": "121fb2a9ddbe2e84bfe6b232fb44fcff",
+    "semantic_hash": "121fb2a9ddbe2e84bfe6b232fb44fcff"
+  },
+  "src/sections/Hero.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279544,
+    "ast_hash": "9644e407c225740be0131883846bc50f",
+    "semantic_hash": "9644e407c225740be0131883846bc50f"
+  },
+  "src/sections/Portfolio.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279553,
+    "ast_hash": "10ffc25f88741b3f9a5513779014cdf2",
+    "semantic_hash": "10ffc25f88741b3f9a5513779014cdf2"
+  },
+  "src/sections/Services.jsx": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279563,
+    "ast_hash": "08c86a78a5ea7539c0adbda9f127b963",
+    "semantic_hash": "08c86a78a5ea7539c0adbda9f127b963"
+  },
+  "vite.config.js": {
+    "mtime": 1787352973.152444,
+    "seen": 1788307837.7279572,
+    "ast_hash": "3f520524d765c1e44f16d165a6ef458d",
+    "semantic_hash": "3f520524d765c1e44f16d165a6ef458d"
+  },
+  "README.md": {
+    "mtime": 1787352973.140978,
+    "seen": 1788307837.7279584,
+    "ast_hash": "657ab2f9d0439575d5a701fef8468d55",
+    "semantic_hash": "657ab2f9d0439575d5a701fef8468d55"
+  },
+  "index.html": {
+    "mtime": 1787352973.140978,
+    "seen": 1788307837.7279596,
+    "ast_hash": "a4672a9951b67936dfd97ce3bd30f560",
+    "semantic_hash": "a4672a9951b67936dfd97ce3bd30f560"
+  },
+  "public/assets/favicon.png": {
+    "mtime": 1787352973.1473103,
+    "seen": 1788307837.7279606,
+    "ast_hash": "d27876b142dcc202a00b2419f902b9c3",
+    "semantic_hash": "d27876b142dcc202a00b2419f902b9c3"
+  },
+  "public/assets/images/portfolio-1.png": {
+    "mtime": 1787352973.1473103,
+    "seen": 1788307837.7279615,
+    "ast_hash": "03f77f88050b7911fdd3e56bc25b5278",
+    "semantic_hash": "03f77f88050b7911fdd3e56bc25b5278"
+  },
+  "public/assets/images/portfolio-1.webp": {
+    "mtime": 1787352973.1473103,
+    "seen": 1788307837.7279627,
+    "ast_hash": "dc26cfc45eca7195290d4b9f0b1a63f8",
+    "semantic_hash": "dc26cfc45eca7195290d4b9f0b1a63f8"
+  },
+  "public/assets/logo-volksoft-light.png": {
+    "mtime": 1787352973.1473103,
+    "seen": 1788307837.7279637,
+    "ast_hash": "b4594b6f6a4d629ce8ee788b6579cfbe",
+    "semantic_hash": "b4594b6f6a4d629ce8ee788b6579cfbe"
+  },
+  "public/assets/logotipo-light.png": {
+    "mtime": 1787352973.1473103,
+    "seen": 1788307837.7279646,
+    "ast_hash": "ea60de5cf643fbaeeb77be0580765aff",
+    "semantic_hash": "ea60de5cf643fbaeeb77be0580765aff"
+  },
+  "public/assets/logotipo-volksoft-light.png": {
+    "mtime": 1787352973.15091,
+    "seen": 1788307837.7279656,
+    "ast_hash": "713918a49b9e343c88bc7fb78a70ad06",
+    "semantic_hash": "713918a49b9e343c88bc7fb78a70ad06"
+  }
+}
