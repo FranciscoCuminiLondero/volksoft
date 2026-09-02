@@ -1,18 +1,20 @@
-# CY Grotesk STD
+# Titles font: Space Grotesk (was: CY Grotesk STD)
 
-Titles (h1/h2/h3, see `src/App.css`) are set to use "CY Grotesk STD", but no
-font files are in this repo — it's a commercial typeface and needs a
-license. Until real files are added, the `font-family` stack silently falls
-back to Inter, so nothing is broken.
+Titles (h1/h2/h3, see `src/App.css`) originally asked for "CY Grotesk STD".
+The only file we had for it (`CyGroteskStd-GrandDemi.otf`, from
+befonts.com) shipped with `License: Personal Use Only` — not valid for a
+commercial site, and not sourced from the original foundry — so it was
+never wired in and has been removed from the repo.
 
-To wire up the real font once you have licensed `.woff2`/`.woff` files (or
-an embed kit from wherever you licensed it, e.g. Adobe Fonts/Fontshare):
+Titles now use **Space Grotesk** (`@fontsource/space-grotesk`, SIL Open
+Font License — free for commercial/web use), loaded in `src/main.jsx` and
+set via the `--font-heading` token in `src/index.css`.
 
-1. Drop the font files under `src/fonts/cy-grotesk/` (e.g.
-   `CYGroteskSTD-Bold.woff2`, `CYGroteskSTD-Regular.woff2`).
-2. Add `@font-face` rules for each weight/style you have, pointing at those
-   files, in `src/App.css` (or a new `src/fonts/cy-grotesk.css` imported
-   from `main.jsx`).
-3. The `h1, h2, h3 { font-family: 'CY Grotesk STD', 'Inter', sans-serif; }`
-   rule already in `src/App.css` needs no further changes — it'll pick up
-   the real font automatically once the `@font-face` is declared.
+If you get a properly licensed CY Grotesk STD (a commercial web license
+from the real foundry, or a marketplace like MyFonts/Fontspring — not a
+"personal use" mirror), swap it in:
+1. Drop the `.woff2`/`.woff` files under `src/fonts/cy-grotesk/`.
+2. Add `@font-face` rules for each weight/style in `src/App.css` (or a new
+   `src/fonts/cy-grotesk.css` imported from `main.jsx`).
+3. Update `--font-heading` in `src/index.css` back to
+   `'CY Grotesk STD', 'Space Grotesk', 'Inter', sans-serif`.

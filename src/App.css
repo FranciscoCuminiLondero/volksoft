@@ -4,10 +4,8 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Titles use CY Grotesk STD (see the --font-heading token in index.css).
-   No licensed font files are in the repo yet — until they're added (see
-   src/fonts/README.md), this silently falls back to Inter, so there's
-   nothing broken in the meantime. */
+/* Titles use Space Grotesk (see the --font-heading token in index.css and
+   src/fonts/README.md for why). */
 h1,
 h2,
 h3 {

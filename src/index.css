@@ -6,9 +6,11 @@
   --color-volk-green: #b8ff3d;
   --color-volk-white: #ffffff;
 
-  /* Titles: CY Grotesk STD (falls back to Inter until the licensed font
-     files are added — see src/fonts/README.md). Body text: Inter. */
-  --font-heading: 'CY Grotesk STD', 'Inter', sans-serif;
+  /* Titles: Space Grotesk. Body text: Inter. (CY Grotesk STD was the
+     original request, but the only file we had was licensed "Personal
+     Use Only" — not valid for a commercial site — so titles use this
+     open-source (SIL OFL) grotesk instead; see src/fonts/README.md.) */
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
   --font-sans: 'Inter', sans-serif;
 }
 
