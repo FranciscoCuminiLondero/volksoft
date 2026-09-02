@@ -11,7 +11,7 @@ const Hero = () => {
       className="scroll-mt-24 min-h-[80vh] flex flex-col items-center justify-center w-full"
     >
       <div className="w-full flex flex-col items-center text-center gap-8">
-        <Logo className="text-3xl sm:text-4xl" />
+        <Logo stacked className="text-4xl sm:text-5xl" />
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight max-w-4xl">
           {t('home.title')}
