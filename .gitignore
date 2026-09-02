@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Secrets — was committed historically, stop tracking going forward
+.env
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
