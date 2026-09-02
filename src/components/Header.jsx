@@ -1,8 +1,16 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import LanguageSwitcher from './LanguageSwitcher';
+import Logo from './Logo';
+
+const NAV_LINKS = [
+  { href: '#inicio', key: 'header.home' },
+  { href: '#servicios', key: 'header.services' },
+  { href: '#casos', key: 'header.portfolio' },
+  { href: '#nosotros', key: 'header.about' },
+  { href: '#contacto', key: 'header.contact' },
+];
 
 const Header = () => {
   const { t } = useTranslation();
@@ -11,12 +19,10 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 0);
+      setIsScrolled(window.scrollY > 0);
     };
 
     const handleClickOutside = (event) => {
-      // Solo cierra si el menú está abierto y el clic no es en el header o en el botón del menú
       if (
         isMobileMenuOpen &&
         !event.target.closest('header') &&
@@ -34,7 +40,6 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Añadir un pequeño retraso para evitar conflictos con el toggle
     if (isMobileMenuOpen) {
       setTimeout(() => {
         document.addEventListener('click', handleClickOutside);
@@ -62,62 +67,28 @@ const Header = () => {
   return (
     <header
       className={`sticky top-0 transition-colors duration-300 ${
-        isScrolled ? 'bg-black/30' : 'bg-black'
-      } text-white px-6 w-full z-50 shadow-lg`}
+        isScrolled ? 'bg-volk-black/90 backdrop-blur-sm' : 'bg-volk-black'
+      } text-white px-6 w-full z-50 border-b border-white/10`}
     >
       <div className="flex justify-between items-center py-4">
-        {/* Logo */}
-        <div className="flex items-center">
-          <Link to="/" className="m-0 p-0">
-            <img
-              src="./assets/logotipo-light.png"
-              alt="Logo Volksoft"
-              className="w-50"
-            />
-          </Link>
-        </div>
+        <a href="#inicio" className="m-0 p-0">
+          <Logo className="text-2xl" />
+        </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-8">
           <nav>
             <ul className="flex gap-6">
-              <li>
-                <Link
-                  to="/"
-                  className="text-white hover:text-gray-400 transition-colors"
-                >
-                  {t('header.home')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-white hover:text-gray-400 transition-colors"
-                >
-                  {t('header.services')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="text-white hover:text-gray-400 transition-colors"
-                >
-                  {t('header.about')}
-                </Link>
-              </li>
-              {/* <li>
-                <Link to="/portfolio" className="text-white hover:text-gray-400 transition-colors">
-                  {t('header.portfolio')}
-                </Link>
-              </li> */}
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-white hover:text-gray-400 transition-colors"
-                >
-                  {t('header.contact')}
-                </Link>
-              </li>
+              {NAV_LINKS.map(({ href, key }) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className="text-white hover:text-volk-green transition-colors"
+                  >
+                    {t(key)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
           <LanguageSwitcher />
@@ -126,7 +97,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMobileMenu}
-          className="md:hidden text-white hover:text-gray-400 transition-colors p-4 -mr-2 touch-manipulation"
+          className="md:hidden text-white hover:text-volk-green transition-colors p-4 -mr-2 touch-manipulation"
           aria-label="Toggle mobile menu"
         >
           {isMobileMenuOpen ? (
@@ -139,55 +110,21 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg shadow-lg mobile-menu-enter border-t border-gray-700">
+        <div className="md:hidden absolute top-full left-0 w-full bg-volk-black/95 backdrop-blur-lg shadow-lg mobile-menu-enter border-t border-white/10">
           <nav className="px-6 py-4">
             <ul className="flex flex-col gap-4">
-              <li>
-                <Link
-                  to="/"
-                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
-                  onClick={closeMobileMenu}
-                >
-                  {t('header.home')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
-                  onClick={closeMobileMenu}
-                >
-                  {t('header.services')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
-                  onClick={closeMobileMenu}
-                >
-                  {t('header.about')}
-                </Link>
-              </li>
-              {/* <li>
-                <Link 
-                  to="/portfolio" 
-                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
-                  onClick={closeMobileMenu}
-                >
-                  {t('header.portfolio')}
-                </Link>
-              </li> */}
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-white hover:text-gray-400 transition-colors block py-2 text-lg"
-                  onClick={closeMobileMenu}
-                >
-                  {t('header.contact')}
-                </Link>
-              </li>
-              <li className="pt-4 border-t border-gray-600">
+              {NAV_LINKS.map(({ href, key }) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className="text-white hover:text-volk-green transition-colors block py-2 text-lg"
+                    onClick={closeMobileMenu}
+                  >
+                    {t(key)}
+                  </a>
+                </li>
+              ))}
+              <li className="pt-4 border-t border-white/10">
                 <LanguageSwitcher />
               </li>
             </ul>
