@@ -22,11 +22,19 @@ const Portfolio = () => {
             href={link}
             className="group relative bg-white/5 border border-white/10 hover:border-volk-green/60 rounded-2xl overflow-hidden transition-colors"
           >
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-56 object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-            />
+            {image ? (
+              <img
+                src={image}
+                alt={title}
+                className="w-full h-56 object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            ) : (
+              <div className="w-full h-56 bg-black/60 flex items-center justify-center">
+                <span className="text-gray-600 text-sm uppercase tracking-widest">
+                  {tag}
+                </span>
+              </div>
+            )}
             <div className="p-6">
               <span className="text-xs font-semibold text-volk-green uppercase tracking-wide">
                 {tag}
