@@ -172,7 +172,7 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-4 text-gray-300">
                 <FaPhone className="text-volk-green text-xl flex-shrink-0" />
-                <a href="tel:+5491124087607">{t('contact.info.phone')}</a>
+                <a href="tel:+5493412272769">{t('contact.info.phone')}</a>
               </div>
               <div className="flex items-center gap-4 text-gray-300">
                 <FaEnvelope className="text-volk-green text-xl flex-shrink-0" />
@@ -181,7 +181,7 @@ const Contact = () => {
               <div className="flex items-center gap-4 text-gray-300">
                 <FaWhatsapp className="text-volk-green text-xl flex-shrink-0" />
                 <a
-                  href="https://wa.me/+5491124087607"
+                  href="https://wa.me/5493412272769"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

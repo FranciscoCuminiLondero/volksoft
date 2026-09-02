@@ -5,7 +5,7 @@ const SocialSidebar = () => {
     <div className="fixed right-0 top-1/2 transform -translate-y-1/2 bg-white/5 border border-white/10 p-4 rounded-l-2xl z-50">
       <div className="flex flex-col gap-6">
         <a
-          href="mailto:info@volk.io"
+          href="mailto:volk-softwares@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-volk-green transition-colors"
@@ -23,7 +23,7 @@ const SocialSidebar = () => {
           <FaLinkedin size={22} />
         </a>
         <a
-          href="https://www.instagram.com/volk"
+          href="https://www.instagram.com/volk.softwares"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-volk-green transition-colors"
@@ -32,7 +32,7 @@ const SocialSidebar = () => {
           <FaInstagram size={22} />
         </a>
         <a
-          href="https://wa.me/+5491124087607"
+          href="https://wa.me/5493412272769"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-volk-green transition-colors"
@@ -41,7 +41,7 @@ const SocialSidebar = () => {
           <FaWhatsapp size={22} />
         </a>
         <a
-          href="tel:+5491124087607"
+          href="tel:+5493412272769"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-volk-green transition-colors"

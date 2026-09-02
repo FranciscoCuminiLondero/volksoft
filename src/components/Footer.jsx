@@ -55,7 +55,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://www.instagram.com/volk"
+                href="https://www.instagram.com/volk.softwares"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-volk-green transition-colors"
