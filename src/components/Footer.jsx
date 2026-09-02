@@ -44,7 +44,7 @@ const Footer = () => {
           <ul className="flex gap-4">
             <li>
               <a
-                href="https://www.linkedin.com/company/volk"
+                href="https://www.linkedin.com/company/volksoft"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-volk-green transition-colors"

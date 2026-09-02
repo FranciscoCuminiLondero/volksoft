@@ -14,7 +14,7 @@ const SocialSidebar = () => {
           <FaEnvelope size={22} />
         </a>
         <a
-          href="https://www.linkedin.com/company/volk"
+          href="https://www.linkedin.com/company/volksoft"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-volk-green transition-colors"
