@@ -1,106 +1,45 @@
 import { useTranslation } from 'react-i18next';
+import { FaArrowRight } from 'react-icons/fa';
+import { PROJECTS } from '../data/projects';
 
 const Portfolio = () => {
   const { t } = useTranslation();
   return (
-    <section>
-      <div className="mx-auto mb-5">
-        <div className="flex items-center justify-between pb-2">
-          <h1 className="text-4xl font-bold">{t('portfolio.title')}</h1>
-          <p className="text-2xl font-extralight">{t('portfolio.subtitle')}</p>
-        </div>
-        <p className="">{t('portfolio.description')}</p>
+    <section id="casos" className="scroll-mt-24">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          {t('cases.title')}
+        </h2>
+        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          {t('cases.subtitle')}
+        </p>
       </div>
-      {/* Card Container */}
-      <div className="grid grid-cols-5 grid-rows-4 gap-5 max-h-200 max-w-6xl mx-auto">
-        {/* Card 1 */}
-        <div className="group relative bg-black/20 rounded-2xl shadow-xl col-span-3 row-span-2">
-          <img
-            src="../../public/assets/images/portfolio-1.png"
-            alt=""
-            className="rounded-xl w-full h-full object-cover opacity-75"
-          />
-          <div className="absolute inset-0 bg-black/70 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-4">
-            <h3 className="text-lg font-bold mb-2">
-              {t('portfolio.cards.web-ejemplo.title')}
-            </h3>
-            <p className="text-sm text-center mb-4">
-              {t('portfolio.cards.web-ejemplo.description')}
-            </p>
-            <a
-              src="#"
-              className="bg-purple-900 text-white px-4 py-2 rounded-full hover:bg-purple-600  transition-colors duration-500 cursor-pointer"
-            >
-              {t('button.look-work')}
-            </a>
-          </div>
-        </div>
-        {/* Card 2 */}
-        <div className="group relative bg-black/20 rounded-2xl shadow-xl col-span-2 row-span-2 col-start-4">
-          <img
-            src="../../public/assets/images/portfolio-1.png"
-            alt=""
-            className="rounded-xl w-full h-full object-cover opacity-75"
-          />
-          <div className="absolute inset-0 bg-black/70 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-4">
-            <h3 className="text-lg font-bold mb-2">
-              {t('portfolio.cards.web-ejemplo.title')}
-            </h3>
-            <p className="text-sm text-center mb-4">
-              {t('portfolio.cards.web-ejemplo.description')}
-            </p>
-            <a
-              src="#"
-              className="bg-purple-900 text-white px-4 py-2 rounded-full hover:bg-purple-600  transition-colors duration-500 cursor-pointer"
-            >
-              {t('button.look-work')}
-            </a>
-          </div>
-        </div>
-        {/* Card 3 */}
-        <div className="group relative bg-black/20 rounded-2xl shadow-xl col-span-2 row-span-2 row-start-3">
-          <img
-            src="../../public/assets/images/portfolio-1.png"
-            alt=""
-            className="rounded-xl w-full h-full object-cover opacity-75"
-          />
-          <div className="absolute inset-0 bg-black/70 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-4">
-            <h3 className="text-lg font-bold mb-2">
-              {t('portfolio.cards.web-ejemplo.title')}
-            </h3>
-            <p className="text-sm text-center mb-4">
-              {t('portfolio.cards.web-ejemplo.description')}
-            </p>
-            <a
-              src="#"
-              className="bg-purple-900 text-white px-4 py-2 rounded-full hover:bg-purple-600  transition-colors duration-500 cursor-pointer"
-            >
-              {t('button.look-work')}
-            </a>
-          </div>
-        </div>
-        {/* Card 4 */}
-        <div className="group relative bg-black/20 rounded-2xl shadow-xl col-span-3 row-span-2 col-start-3 row-start-3">
-          <img
-            src="../../public/assets/images/portfolio-1.png"
-            alt=""
-            className="rounded-xl w-full h-full object-cover opacity-75"
-          />
-          <div className="absolute inset-0 bg-black/70 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-4">
-            <h3 className="text-lg font-bold mb-2">
-              {t('portfolio.cards.web-ejemplo.title')}
-            </h3>
-            <p className="text-sm text-center mb-4">
-              {t('portfolio.cards.web-ejemplo.description')}
-            </p>
-            <a
-              src="#"
-              className="bg-purple-900 text-white px-4 py-2 rounded-full hover:bg-purple-600  transition-colors duration-500 cursor-pointer"
-            >
-              {t('button.look-work')}
-            </a>
-          </div>
-        </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {PROJECTS.map(({ id, title, description, tag, image, link }) => (
+          <a
+            key={id}
+            href={link}
+            className="group relative bg-white/5 border border-white/10 hover:border-volk-green/60 rounded-2xl overflow-hidden transition-colors"
+          >
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-56 object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="p-6">
+              <span className="text-xs font-semibold text-volk-green uppercase tracking-wide">
+                {tag}
+              </span>
+              <h3 className="text-lg font-bold text-white mt-2 mb-2">{title}</h3>
+              <p className="text-sm text-gray-400">{description}</p>
+              <span className="inline-flex items-center gap-2 text-sm text-white mt-4 group-hover:text-volk-green transition-colors">
+                {t('button.look-work')}
+                <FaArrowRight />
+              </span>
+            </div>
+          </a>
+        ))}
       </div>
     </section>
   );
